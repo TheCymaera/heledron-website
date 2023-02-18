@@ -2,8 +2,10 @@
 	padding: .5em;
 
 	display: grid;
-	grid-template-columns: 1fr 220px;
 	gap: 1em;
+	grid-template: 
+		"header header" min-content
+		"main sidebar" 1fr / 1fr 210px;
 
 	margin: auto;
 	width: min(100%, 800px);
@@ -11,11 +13,26 @@
 
 @media (max-width: 800px) {
 	.App {
-		grid-template-columns: 1fr;
-
+		grid-template: 
+			"header" min-content
+			"main" min-content
+			"sidebar" min-content;
 	}
 }
 
-.App-Main > * {
+.App-Header {
+	grid-area: header;
+}
+
+.App-Main {
+	grid-area: main;
+}
+
+.App-Sidebar {
+	grid-area: sidebar;
+}
+
+.App-Main > *,
+.App-Sidebar > * {
 	margin-bottom: 1em;
 }
