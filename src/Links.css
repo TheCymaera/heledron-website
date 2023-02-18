@@ -1,0 +1,23 @@
+.App-Links {
+	--min-column-width: 80px;
+	grid-gap: 1em;
+	align-items: start;
+}
+
+.App-Links .helion-card-button {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	grid-gap: .5em;
+	padding: 1em;
+	aspect-ratio: 1;
+}
+
+.App-Links i {
+	font-size: 200%;
+}
+
+.App-Links h3 {
+	margin: 0;
+}

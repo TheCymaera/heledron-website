@@ -1,0 +1,21 @@
+import "./Links.css";
+import "./Tools.css";
+import "./layout.css";
+import { fa5_brands_discord, fa5_brands_github, fa5_brands_patreon, fa5_brands_redditAlien, fa5_brands_twitter, fa5_brands_youtube, fa5_solid_angleLeft, fa5_solid_envelope, fa5_solid_link } from "fontawesome-svgs";
+import {} from "helion/core.js";
+import {} from "helion/LightTheme.js";
+import {} from "helion/StandardView.js";
+import {} from "helion/WrappingGrid.js";
+import {} from "helion/AppBar.js";
+import {} from "helion/Card.js";
+import {} from "helion/CardButton.js";
+
+// document.querySelector(".fa5_solid_link")!.innerHTML = fa5_solid_link;
+// document.querySelector(".fa5_solid_angleLeft")!.innerHTML = fa5_solid_angleLeft;
+document.querySelector(".fa5_brands_twitter")!.innerHTML = fa5_brands_twitter;
+document.querySelector(".fa5_brands_github")!.innerHTML = fa5_brands_github;
+document.querySelector(".fa5_brands_redditAlien")!.innerHTML = fa5_brands_redditAlien;
+document.querySelector(".fa5_brands_youtube")!.innerHTML = fa5_brands_youtube;
+document.querySelector(".fa5_brands_discord")!.innerHTML = fa5_brands_discord;
+document.querySelector(".fa5_brands_envelope")!.innerHTML = fa5_solid_envelope;
+document.querySelector(".fa5_brands_patreon")!.innerHTML = fa5_brands_patreon;

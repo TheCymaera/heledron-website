@@ -1,0 +1,21 @@
+.App {
+	padding: .5em;
+
+	display: grid;
+	grid-template-columns: 1fr 220px;
+	gap: 1em;
+
+	margin: auto;
+	width: min(100%, 800px);
+}
+
+@media (max-width: 800px) {
+	.App {
+		grid-template-columns: 1fr;
+
+	}
+}
+
+.App-Main > * {
+	margin-bottom: 1em;
+}

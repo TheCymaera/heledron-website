@@ -1,0 +1,37 @@
+.App-Tools {
+	--min-column-width: 200px;
+	grid-gap: 1em;
+}
+
+.App-Tools .helion-card-button {
+	overflow: hidden;
+}
+
+.App-Tools img {
+	display: block;
+	text-align: center;
+
+	width: 100%;
+	aspect-ratio: 1200 / 630;
+}
+
+.App-Tools div {
+	padding: .5em;
+	line-height: 1.2;
+}
+
+.App-Tools h2 {
+	font-size: 100%;
+	margin: 0;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+}
+
+main > * {
+	flex: none;
+}
+
