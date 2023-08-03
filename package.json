@@ -2,14 +2,16 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "vite dev",
     "build": "vite build",
-    "dev": "vite dev"
+    "create-symlinks": "deno run --allow-read --allow-write external/symlinks_create.js"
   },
   "dependencies": {
     "fontawesome-svgs": "^1.0.2",
-    "helion": "link:/Users/morgannew/Desktop/code/web/misc/npm-packages/helion-v2",
-    "vite": "^4.1.2",
-    "vite-plugin-html": "^3.2.0",
-    "vite-plugin-singlefile": "^0.13.3"
+    "vite": "^4.4.8",
+    "vite-plugin-static-copy": "^0.17.0"
+  },
+  "devDependencies": {
+    "vite-multiple-assets": "^1.1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"module": "ESNext",
+		"module": "NodeNext",
 		"target": "ESNext",
 
 		"moduleResolution": "nodenext",
@@ -12,7 +12,7 @@
 		"alwaysStrict": true,
 
 		"isolatedModules": true,
-		"importsNotUsedAsValues": "preserve",
+		"verbatimModuleSyntax": true,
 		"preserveConstEnums": true,
 
 		"skipDefaultLibCheck": true,
@@ -20,6 +20,7 @@
 		"noEmit": true,
 
 		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"skipLibCheck": true,
 
 		"baseUrl": ".",
 	}

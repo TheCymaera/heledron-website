@@ -1,0 +1,61 @@
+:root {
+	font-family: Consolas, monospace;
+	color: red;
+	font-weight: bold;
+	text-align: center;
+	font-size: 30px;
+}
+:root, body {
+	position: fixed;
+	inset: 0;
+	margin: 0;
+	overflow: hidden;
+	user-select: none;
+}
+.center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+}
+a {
+	all: unset;
+	cursor: pointer;
+
+	font-size: 80%;
+	text-decoration: underline;
+}
+#boxContainer {
+	font-size: 150%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1em;
+}
+#boxContainer > * {
+	position: relative;
+	width: 1.5em;
+	height: 1.5em;
+	border: .1em solid currentColor;
+	transition: background-color .2s;
+}
+#boxContainer > .fleeing {
+	background-color: #f003;
+}
+#boxContainer > :hover {
+	animation: vibrate .1s infinite;
+}
+@keyframes vibrate {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-7deg);
+	}
+	75% {
+		transform: rotate(7deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}

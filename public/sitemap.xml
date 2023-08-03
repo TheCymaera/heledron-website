@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://heledron.com/</loc>
+  <lastmod>2023-03-17T20:34:20+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://heledron.com/tools/qr-code-generator/</loc>
+  <lastmod>2023-03-17T20:34:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://heledron.com/tools/image-folder-resizer/</loc>
+  <lastmod>2023-02-19T00:24:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://heledron.com/tools/file-converter/</loc>
+  <lastmod>2023-02-19T00:20:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://heledron.com/tools/visual-acuity-test/</loc>
+  <lastmod>2023-02-19T00:43:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://heledron.com/misc/boids/</loc>
+  <lastmod>2023-02-19T00:17:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://heledron.com/misc/sorting-algorithm-visualizer/</loc>
+  <lastmod>2023-02-19T00:38:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://heledron.com/misc/kinematic-chain/</loc>
+  <lastmod>2023-02-19T00:25:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://heledron.com/misc/double-pendulum/</loc>
+  <lastmod>2023-02-19T00:15:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://heledron.com/tools/universal-time/</loc>
+  <lastmod>2023-02-19T00:41:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://heledron.com/tools/emcl-compiler/</loc>
+  <lastmod>2023-03-17T20:43:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://heledron.com/tools/reuleaux-polygon-generator/</loc>
+  <lastmod>2023-02-19T00:36:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://heledron.com/tools/pixel-text-generator/</loc>
+  <lastmod>2023-02-19T00:33:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://heledron.com/tools/suvat-calculator/</loc>
+  <lastmod>2023-02-19T00:47:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://heledron.com/misc/ascii3d/demos/water/</loc>
+  <lastmod>2023-03-17T20:43:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>

@@ -4,56 +4,194 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<!-- title & favicon -->
-	<title><%- page_title %></title>
-	<link rel="icon" href="/favicon.png" type="image/png"/>
-	<link rel="canonical" href="<%- page_url %>"/>
-	
 	<!-- info -->
-	<meta name="author" content="<%- page_author %>"/>
-	<meta name="description" content="<%- page_description %>"/>
-	<meta name="keywords" content="<%- page_keywords %>"/>
-	
-	<!-- sharing -->
-	<meta property="og:title" content="<%- page_og_title %>"/>
-	<meta property="og:description" content="<%- page_og_description %>"/>
-	<meta property="og:url"   content="<%- page_og_url %>"/>
-	<meta property="og:image" content="<%- page_og_image %>"/>
-	<meta property="og:type"  content="<%- page_og_type %>"/>
+	<title>Home - Heledron</title>
+	<meta name="author" content="Morgan"/>
+	<meta name="description" content="Heledron - Home Page"/>
+	<meta name="keywords" content="Heledron, Hadron, Cymaera"/>
+	<link rel="canonical" href="https://heledron.com/"/>
+	<meta property="og:image" content="https://heledron.com/thumbnail.webp"/>
+	<link rel="icon" href="/favicon.png" type="image/png"/>
 
 	<!-- scripts -->
-	<script type="module" src="./src/main.ts"></script>
+	<script type="module" src="main.ts"></script>
 </head>
 <body>
-		<div class="App">
-			<h1 class="App-Header" style="
-				text-align: center; 
-				margin: 0;
-				font-size: 50px;
-			">Heledron</h1>
-			<div class="App-Main">
-				<helion-card style="padding: .5em;">
-					Welcome! <br />
-					This is my personal website. I post all my projects here, including free tools, packages, and more.
-				</helion-card>
+	<div id="app">
+		<h1 id="header" style="text-align: center; margin: 0; font-size: 50px;">
+			Heledron
+		</h1>
 
-				<helion-card style="padding: .5em;">
-					Current Project: <code><a href="https://github.com/TheCymaera/mcpack-builder" target="_blank">mcpack-builder</a></code>
-				</helion-card>
+		<div id="mainColumn">
+			<main class="Card" style="padding: .8em;">
+				<h2 style="margin: 0;">Welcome!</h2>
+				<p style="margin: 0;">
+					This is my personal website. I post my projects here, including free tools, packages, and more.
+				</p>
+			</main>
 
-				<helion-wrapping-grid class="App-Tools">
-					<%- include(process.cwd() + '/cards.html') %>
-				</helion-wrapping-grid>
+			<div class="Card" style="padding: .8em;">
+				Current Project: <code><a href="https://github.com/TheCymaera/mcpack-builder" target="_blank">mcpack-builder</a></code>
 			</div>
 
-			<div class="App-Sidebar">
-				<helion-wrapping-grid class="App-Links" id="links">
-					<%- include(process.cwd() + '/links.html') %>
-				</helion-wrapping-grid>
-			</div>
+			<nav id="tools" class="WrappingGrid">
+				<a class="Card" href="./tools/qr-code-generator/" target="_blank">
+					<img src="./tools/qr-code-generator/thumbnail-resized-512.webp" width="1200" height="630" loading="lazy" alt="thumbnail">
+					<div>
+						<h2>QR Code Generator</h2>
+						<small>Generate QR Codes.</small>
+					</div>
+				</a>
 
-			<span style="flex: 1;"></span>
+				<a class="Card" href="./tools/image-folder-resizer/" target="_blank">
+					<img src="./tools/image-folder-resizer/thumbnail-resized-512.webp" width="1200" height="630" loading="lazy" alt="thumbnail">
+					<div>
+						<h2>Image Folder Resizer</h2>
+						<small>Batch resize images inside a folder hierarchy.</small>
+					</div>
+				</a>
+
+				<a class="Card" href="./tools/file-converter/" target="_blank">
+					<img src="./tools/file-converter/thumbnail-resized-512.webp" width="1200" height="630" loading="lazy" alt="thumbnail">
+					<div>
+						<h2>File Converter</h2>
+						<small>Convert audio, image and video formats.</small>
+					</div>
+				</a>
+
+				<a class="Card" href="./tools/visual-acuity-test/" target="_blank">
+					<img src="./tools/visual-acuity-test/thumbnail-resized-512.webp" width="1200" height="630" loading="lazy" alt="thumbnail">
+					<div>
+						<h2>Visual Acuity Test</h2>
+						<small>Randomized eye test.</small>
+					</div>
+				</a>
+
+				<a class="Card" href="./misc/boids/" target="_blank">
+					<img src="./misc/boids/thumbnail-resized-512.webp" width="1200" height="630" loading="lazy" alt="thumbnail">
+					<div>
+						<h2>Boids</h2>
+						<small>Flocking Simulation.</small>
+					</div>
+				</a>
+
+				<a class="Card" href="./misc/sorting-algorithm-visualizer/" target="_blank">
+					<img src="./misc/sorting-algorithm-visualizer/thumbnail-resized-512.webp" width="1200" height="630" loading="lazy" alt="thumbnail">
+					<div>
+						<h2>Sorting Algorithm Visualizer</h2>
+						<small>Visualize Sorting Algorithms.</small>
+					</div>
+				</a>
+
+				<a class="Card" href="./misc/kinematic-chain/" target="_blank">
+					<img src="./misc/kinematic-chain/thumbnail-resized-512.webp" width="1200" height="630" loading="lazy" alt="thumbnail">
+					<div>
+						<h2>Kinematic Chain</h2>
+						<small>Kinematic Chain simulation.</small>
+					</div>
+				</a>
+
+				<a class="Card" href="./misc/double-pendulum/" target="_blank">
+					<img src="./misc/double-pendulum/thumbnail-resized-512.webp" width="1200" height="630" loading="lazy" alt="thumbnail">
+					<div>
+						<h2>Double Pendulum</h2>
+						<small>Double Pendulum physics simulation.</small>
+					</div>
+				</a>
+
+				<a class="Card" href="./tools/universal-time/" target="_blank">
+					<img src="./tools/universal-time/thumbnail-resized-512.webp" width="1200" height="630" loading="lazy" alt="thumbnail">
+					<div>
+						<h2>Universal Time</h2>
+						<small>Share date times across timezones.</small>
+					</div>
+				</a>
+
+				<a class="Card" href="./tools/emcl-compiler/" target="_blank">
+					<img src="./tools/emcl-compiler/thumbnail-resized-512.webp" width="1200" height="630" loading="lazy" alt="thumbnail">
+					<div>
+						<h2>EMCL Compiler</h2>
+						<small>A compiler for Minecraft functions.</small>
+					</div>
+				</a>
+
+				<a class="Card" href="./tools/reuleaux-polygon-generator/" target="_blank">
+					<img src="./tools/reuleaux-polygon-generator/thumbnail-resized-512.webp" width="1200" height="630" loading="lazy" alt="thumbnail">
+					<div>
+						<h2>Reuleaux Polygon Generator</h2>
+						<small>Generate figures of constant width.</small>
+					</div>
+				</a>
+
+				<a class="Card" href="./tools/pixel-text-generator/" target="_blank">
+					<img src="./tools/pixel-text-generator/thumbnail-resized-512.webp" width="1200" height="630" loading="lazy" alt="thumbnail">
+					<div>
+						<h2>Pixel Text Generator</h2>
+						<small>Generate pixel text of various styles.</small>
+					</div>
+				</a>
+
+				<a class="Card" href="./tools/suvat-calculator/" target="_blank">
+					<img src="./tools/suvat-calculator/thumbnail-resized-512.webp" width="1200" height="630" loading="lazy" alt="thumbnail">
+					<div>
+						<h2>SUVAT Calculator</h2>
+						<small>Automatically solve SUVAT equations.</small>
+					</div>
+				</a>
+
+				<a class="Card" href="./misc/ascii3d/demos/water/" target="_blank">
+					<img src="./misc/ascii3d/demos/water/thumbnail-resized-512.webp" width="1200" height="630" loading="lazy" alt="thumbnail">
+					<div>
+						<h2>Ascii 3D Water Demo</h2>
+						<small>A text-based 3D renderer for JavaScript.</small>
+					</div>
+				</a>
+			</nav>
 		</div>
+
+		<aside id="sidebar">
+			<nav class="WrappingGrid" id="links">
+				<a class="Card" target="_blank" href="https://twitter.com/cymaera">
+					<i class="fa5_brands_twitter"></i>
+					<span>Twitter</span>
+				</a>
+				
+				<a class="Card" target="_blank" href="https://github.com/TheCymaera">
+					<i class="fa5_brands_github"></i>
+					<span>GitHub</span>
+				</a>
+				
+				<a class="Card" target="_blank" href="https://www.reddit.com/user/Cymaera/">
+					<i class="fa5_brands_redditAlien"></i>
+					<span>Reddit</span>
+				</a>
+				
+				<a class="Card" target="_blank" href="https://www.youtube.com/channel/UCW9KvoeUz2CsBwIGh3ux1ew">
+					<i class="fa5_brands_youtube"></i>
+					<span>YouTube</span>
+				</a>
+				
+				<a class="Card" target="_blank" href="https://discord.gg/HMdveNKPVb">
+					<i class="fa5_brands_discord"></i>
+					<span>Discord</span>
+				</a>
+				
+				<a class="Card" target="_top" href="mailto:heledron@gmail.com">
+					<i class="fa5_brands_envelope"></i>
+					<span>Email</span>
+				</a>
+				
+				<a class="Card" target="_blank" href="https://www.patreon.com/cymaera">
+					<i class="fa5_brands_patreon"></i>
+					<span>Patreon</span>
+				</a>
+				
+				<a class="Card" target="_blank" href="https://www.redbubble.com/people/Heledron/shop?asc=u">
+					<span style="font-size: 200%; line-height: 100%;">RB</span>
+					<span>Redbubble</span>
+				</a>
+			</nav>
+		</aside>
 	</div>
 </body>
 </html>
