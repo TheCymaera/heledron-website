@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
+		"validate-version": "deno run --allow-read --allow-run=git external/symlinks_validate.js",
     "create-symlinks": "deno run --allow-read --allow-write external/symlinks_create.js"
   },
   "dependencies": {
