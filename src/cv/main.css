@@ -1,0 +1,92 @@
+:root {
+	--font: Tahoma,sans-serif;
+
+	--surface: #eee;
+	--onSurface: #333;
+
+	--surfaceContainer: #fff;
+	--onSurfaceContainer: #333;
+
+	--primary: rgb(0, 172, 172);
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+	background-color: var(--surface);
+	color: var(--onSurface);
+	font-family: var(--font);
+
+	line-height: 1.5;
+
+	text-wrap: balance;
+}
+
+* {
+	min-height: 0;
+	min-width: 0;
+}
+
+.column {
+	position: relative; 
+	margin: auto; 
+	max-width: 900px; 
+	padding: 2rem;
+}
+.break-before-page {
+	break-before: page;
+}
+
+p,
+h1, h2, h3, h4, h5, h6 {
+	margin: .5em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	padding-top: 2rem;
+}
+
+h1 {
+	padding-top: 0;
+}
+
+a {
+	color: var(--primary);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	break-after: avoid;
+}
+
+.mt-0 {
+	margin-top: 0;
+}
+
+.card {
+	display: block;
+
+	background-color: var(--surfaceContainer);
+	color: var(--onSurfaceContainer);
+
+	border-radius: .5rem;
+
+	text-decoration: inherit;
+}
+
+.card-p {
+	padding: .5rem;
+}
+
+.shadow-md {
+	box-shadow: 0 0 0.5em #0002;
+}
+
+.nearest-neighbor {
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}

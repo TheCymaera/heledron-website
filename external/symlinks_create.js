@@ -2,7 +2,6 @@
 
 import { symlinks, inputFolder, outputFolder } from "./symlinks_config.js";
 
-// Deno create symlink
 for (const [outputPath, inputPath] of Object.entries(symlinks)) {
 	try {
 		const inputFile = Deno.realPathSync(inputFolder + inputPath);
@@ -11,8 +10,6 @@ for (const [outputPath, inputPath] of Object.entries(symlinks)) {
 		const parentFolder = outputFile.substring(0, outputFile.lastIndexOf("/"));
 		Deno.mkdirSync(parentFolder, { recursive: true });
 
-
-		// copySync(inputFile, outputFile);
 		Deno.symlinkSync(inputFile, outputFile);
 	}
 	catch (error) {

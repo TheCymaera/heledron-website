@@ -4,16 +4,13 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-		"validate": "deno run --allow-read --allow-run=git external/symlinks_validate.js",
-		"validate-w-fetch": "deno run --allow-read --allow-run=git external/symlinks_validate.js --fetch",
+    "validate": "deno run --allow-read --allow-run=git external/symlinks_validate.js",
+    "validate-w-fetch": "deno run --allow-read --allow-run=git external/symlinks_validate.js --fetch",
     "create-symlinks": "deno run --allow-read --allow-write external/symlinks_create.js"
   },
-  "dependencies": {
-    "fontawesome-svgs": "^1.0.2",
-    "vite": "^4.4.8",
-    "vite-plugin-static-copy": "^0.17.0"
-  },
   "devDependencies": {
-    "vite-multiple-assets": "^1.1.0"
+    "@types/node": "^20.11.5",
+    "fontawesome-svgs": "^1.0.2",
+    "vite": "^4.4.8"
   }
 }
