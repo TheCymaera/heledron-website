@@ -1,5 +1,4 @@
 import { symlinks, inputFolder } from "./symlinks_config.js";
-//import { exec, OutputMode } from "https://deno.land/x/execute@v1.1.0/mod.ts";
 
 // get flag from command line
 const doFetch = Deno.args.includes("--fetch");
@@ -33,24 +32,25 @@ async function scanRepo(inputPath, fetch = false) {
 		const repositoryPath = Deno.realPathSync(inputFolder + inputPath + "/../");
 		const buildPath = Deno.realPathSync(inputFolder + inputPath);
 
-		// cd
-		Deno.chdir(repositoryPath);
-
 		// fetch updates
-		//if (fetch) await exec("git fetch");
-		if (fetch) await new Deno.Command("git", { args: ["fetch"] }).output();
+		if (fetch) {
+			Deno.chdir(repositoryPath);
+			await new Deno.Command("git", { args: ["fetch"] }).output();
+		}
 
-		//const gitStatus = await exec("git status", { output: OutputMode.Capture });
+		Deno.chdir(repositoryPath);
 		const gitStatus = await new Deno.Command("git", { args: ["status"], stdout: "piped" }).output();
-		const gitStatusDecoded = new TextDecoder("utf-8").decode(gitStatus.stdout);
+		
+		Deno.chdir(repositoryPath);
+		const lastCommitOutput = await new Deno.Command("git", { args: ["log", "-1", "--format=%cd"], stdout: "piped" }).output();
 
+		const gitStatusDecoded = new TextDecoder("utf-8").decode(gitStatus.stdout);
 		const gitIsUpToDate = gitStatusDecoded.includes("Your branch is up to date with 'origin/master'");
 		const noUnStagedChanges = !gitStatusDecoded.includes("Changes not staged for commit");
 
-		//const lastCommitOutput = await exec("git log -1 --format=%cd", { output: OutputMode.Capture });
-		const lastCommitOutput = await new Deno.Command("git", { args: ["log", "-1", "--format=%cd"], stdout: "piped" }).output();
 		const lastCommitOutputDecoded = new TextDecoder("utf-8").decode(lastCommitOutput.stdout);
 		const lastCommit = new Date(lastCommitOutputDecoded);
+
 		const lastBuild = Deno.statSync(buildPath).mtime;
 
 		const buildIsUpToDate = lastCommit <= lastBuild;
