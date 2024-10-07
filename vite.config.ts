@@ -20,8 +20,7 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				"home": root + "/index.html",
-				"403": root + "/error-pages/403.html",
-				"404": root + "/error-pages/404.html",
+				"404": root + "/404.html",
 				"cv": root + "/cv/index.html",
 			}
 		}
