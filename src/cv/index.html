@@ -13,19 +13,21 @@
 	<meta property="og:image" content="https://heledron.com/thumbnail.webp"/>
 	<link rel="icon" href="/favicon.png" type="image/png"/>
 
-	<link href="./main.css" rel="stylesheet">
+	<script type="module" src="./main.ts"></script>
 </head>
 <body>
-	<div class="column">
-		<h1>Welcome!</h1>
+	<div class="relative m-auto max-w-4xl p-6">
+		<h1 class="mt-0 pt-0">
+			Welcome!
+		</h1>
 		<p>
-			I am Morgan. I am an independent programmer. I have worked on a variety of front-end, back-end, and game development projects. Contact me at <a class="Card" target="_top" href="mailto:cymaera@heledron.com">cymaera@heledron.com</a>.
+			I am Morgan. I am an independent programmer. I have worked on a variety of front-end, back-end, and game development projects. Contact me at <a target="_top" href="mailto:cymaera@heledron.com">cymaera@heledron.com</a>.
 		</p>
 
 		<h2>ERP System</h2>
-		<div style="display: flex; gap: 1rem;">
-			<img src="./images/erp-desktop.png" alt="ERP Desktop" class="shadow-md" style="max-height: 400px; align-self: flex-start;">
-			<img src="./images/erp-mobile.png" alt="ERP Mobile" class="shadow-md" style="max-height: 400px; align-self: flex-start;">
+		<div class="flex gap-4">
+			<img src="./images/erp-desktop.png" alt="ERP Desktop" class="shadow-md max-h-[400px] self-start">
+			<img src="./images/erp-mobile.png" alt="ERP Mobile" class="shadow-md max-h-[400px] self-start">
 		</div>
 
 		<br>
@@ -65,8 +67,8 @@
 		</p>
 
 		<h2 class="break-before-page">Marketing / Landing Page</h2>
-		<div style="display: flex; gap: 1rem;">
-			<img src="./images/coconutsugar.png" alt="ERP Desktop" class="shadow-md" style="max-height: 400px; align-self: flex-start;">
+		<div class="flex gap-4">
+			<img src="./images/coconutsugar.png" alt="ERP Desktop" class="shadow-md max-h-[400px] self-start">
 		</div>
 
 		<p>
@@ -75,8 +77,8 @@
 
 		
 		<h2 class="break-before-page">Outlook Add-in</h2>
-		<div style="display: flex; gap: 1rem;">
-			<img src="./images/outlook-addin.png" alt="ERP Desktop" class="shadow-md" style="max-height: 400px; align-self: flex-start;">
+		<div class="flex gap-4">
+			<img src="./images/outlook-addin.png" alt="ERP Desktop" class="shadow-md max-h-[400px] self-start">
 		</div>
 
 		<br>
@@ -109,20 +111,20 @@
 
 		<h3>Reuleaux Polygon Generator</h3>
 
-		<img class="shadow-md" src="/tools/reuleaux-polygon-generator/thumbnail.webp" style="max-width: 400px; width: 100%;" alt="Reuleaux Polygon Generator">
+		<img class="shadow-md max-w-[400px] w-full" src="/tools/reuleaux-polygon-generator/thumbnail.webp" alt="Reuleaux Polygon Generator">
 		<p>
 			A tool for generating Reuleaux polygons. This tool was featured in a successful <a href="https://www.kickstarter.com/projects/mathmeetsmachine/make-100-revolution-evolution-3d-reuleaux-polygons-set" target="_blank">Kickstarter campaign</a>. This was the first of its kind to be made publicly available on the web (that I could find), and is currently still the only one that supports an "extension" parameter.
 		</p>
 
 		<h3>Sorting Algorithm Visualizer</h3>
 
-		<img class="shadow-md" src="/misc/sorting-algorithm-visualizer/thumbnail.webp" style="max-width: 400px; width: 100%;" alt="Sorting Algorithm Visualizer" />
+		<img class="shadow-md max-w-[400px] w-full" src="/misc/sorting-algorithm-visualizer/thumbnail.webp" alt="Sorting Algorithm Visualizer" />
 		<p>
 			A tool for visualizing 11+ sorting algorithms. Although other tools for this already exist, I wanted to build one that would work on the web and visualize auxiliary memory.
 		</p>
 		
 		<h3 class="break-before-page">Ascii 3D</h3>
-		<img class="shadow-md" src="/misc/ascii3d/demos/water/thumbnail.webp" style="max-width: 400px; width: 100%;" alt="Ascii 3D" />
+		<img class="shadow-md max-w-[400px] w-full" src="/misc/ascii3d/demos/water/thumbnail.webp" alt="Ascii 3D" />
 		<p>
 			A 3D rendering pipeline that outputs ASCII characters instead of pixels. This was featured on <a href="https://www.youtube.com/watch?v=ARQh52GHNtk&t=1710s" target="_blank">BxJS Weekly</a>, a popular JavaScript podcast. This project taught me linear algebra and how 3D rendering pipelines work.
 		</p>
@@ -141,28 +143,28 @@
 			Here are some projects I built using this tool:
 		</p>
 
-		<div style="display: grid; gap: 1rem; grid-template-columns: repeat(2, 1fr);">
-			<div class="card shadow-md" style="overflow: hidden;">
-				<img style="width: 100%; display: block;" src="./images/minecraft-3d-grapher.jpg" alt="3D Grapher in Minecraft">
-				<div class="card-p">
+		<div class="grid gap-4 grid-cols-2">
+			<div class="Card shadow-md overflow-hidden">
+				<img class="w-full block" src="./images/minecraft-3d-grapher.jpg" alt="3D Grapher in Minecraft">
+				<div class="p-3">
 					A working animated 3D Grapher in Minecraft
 				</div>
 			</div>
-			<div class="card shadow-md" style="overflow: hidden;">
-				<img style="width: 100%; display: block;" src="./images/minecraft-fluid-physics.jpg" alt="Fluid Physics in Minecraft">
-				<div class="card-p">
+			<div class="Card shadow-md overflow-hidden">
+				<img class="w-full block" src="./images/minecraft-fluid-physics.jpg" alt="Fluid Physics in Minecraft">
+				<div class="p-3">
 					A fluid physics simulation in Minecraft
 				</div>
 			</div>
-			<div class="card shadow-md" style="overflow: hidden;">
-				<img style="width: 100%; display: block;" src="./images/minecraft-gol.jpg" alt="Game of Life in Minecraft">
-				<div class="card-p">
+			<div class="Card shadow-md overflow-hidden">
+				<img class="w-full block" src="./images/minecraft-gol.jpg" alt="Game of Life in Minecraft">
+				<div class="p-3">
 					Conway's Game of Life in Minecraft
 				</div>
 			</div>
-			<div class="card shadow-md" style="overflow: hidden;">
-				<img style="width: 100%; display: block;" src="./images/minecraft-snake-game.jpg" alt="Snake Game in Minecraft">
-				<div class="card-p">
+			<div class="Card shadow-md overflow-hidden">
+				<img class="w-full block" src="./images/minecraft-snake-game.jpg" alt="Snake Game in Minecraft">
+				<div class="p-3">
 					The classic Snake Game in Minecraft
 				</div>
 			</div>
@@ -174,28 +176,28 @@
 		<p>
 			I have also developed a number of server plugins for Minecraft using Java and Kotlin. These include:
 		</p>
-		<div style="display: grid; gap: 1rem; grid-template-columns: repeat(2, 1fr);">
-			<div class="card shadow-md" style="overflow: hidden;">
-				<img style="width: 100%; display: block;" src="./images/minecraft-3d-renderer.jpg" alt="3D Renderer in Minecraft">
-				<div class="card-p">
+		<div class="grid gap-4 grid-cols-2">
+			<div class="Card shadow-md overflow-hidden">
+				<img class="w-full block" src="./images/minecraft-3d-renderer.jpg" alt="3D Renderer in Minecraft">
+				<div class="p-3">
 					A working animated 3D Rendering Pipeline in Minecraft
 				</div>
 			</div>
-			<div class="card shadow-md" style="overflow: hidden;">
-				<img style="width: 100%; display: block;" src="./images/minecraft-double-pendulum.jpg" alt="Double Pendulum in Minecraft">
-				<div class="card-p">
+			<div class="Card shadow-md overflow-hidden">
+				<img class="w-full block" src="./images/minecraft-double-pendulum.jpg" alt="Double Pendulum in Minecraft">
+				<div class="p-3">
 					A double pendulum physics simulation in Minecraft
 				</div>
 			</div>
-			<div class="card shadow-md" style="overflow: hidden;">
-				<img style="width: 100%; display: block;" src="./images/minecraft-sorting-algorithm-visualizer.jpg" alt="Sorting Algorithm Visualizer in Minecraft">
-				<div class="card-p">
+			<div class="Card shadow-md overflow-hidden">
+				<img class="w-full block" src="./images/minecraft-sorting-algorithm-visualizer.jpg" alt="Sorting Algorithm Visualizer in Minecraft">
+				<div class="p-3">
 					A sorting algorithm visualizer in Minecraft
 				</div>
 			</div>
-			<div class="card shadow-md" style="overflow: hidden;">
-				<img style="width: 100%; display: block;" src="./images/minecraft-boids.jpg" alt="Boids in Minecraft">
-				<div class="card-p">
+			<div class="Card shadow-md overflow-hidden">
+				<img class="w-full block" src="./images/minecraft-boids.jpg" alt="Boids in Minecraft">
+				<div class="p-3">
 					Boids (Bird-oids), a flocking simulation in Minecraft.
 				</div>
 			</div>
@@ -216,9 +218,9 @@
 		</p>
 
 		<h3>Game Engine</h2>
-		<div style="display: flex; gap: 1rem; flex-wrap: wrap; position: relative; align-items: start;">
-			<img class="shadow-md" style="display: block; max-height: 300px;" src="./images/2d-shooter.png" alt="Game Engine">
-			<img class="shadow-md nearest-neighbor" style="display: block; max-height: 300px;" src="./images/deep.png" alt="Game Engine">
+		<div class="flex gap-4 flex-wrap relative items-start">
+			<img class="shadow-md block max-h-[300px]" src="./images/2d-shooter.png" alt="Game Engine">
+			<img class="shadow-md nearest-neighbor block max-h-[300px]" src="./images/deep.png" alt="Game Engine">
 		</div>
 		<br>
 
@@ -227,7 +229,7 @@
 		</p>
 	
 		<h3 class="break-before-page">ICECube (Code Editor)</h2>
-		<img style="width: 100%; display: block;" src="./images/icecube.png" alt="ICECube IDE">
+		<img class="w-full block" src="./images/icecube.png" alt="ICECube IDE">
 	
 		<p>
 			ICECube is a code editor I developed a while ago. It had a web version using the relatively new File System Access API, and an Electron.js version which I never made public.

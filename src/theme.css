@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@theme {
+	--color-surface: #eee;
+	--color-onSurface: #333;
+
+	--color-surfaceContainer: #fff;
+	--color-onSurfaceContainer: #333;
+
+
+	--color-primary-100: var(--color-teal-100);
+	--color-primary-200: var(--color-teal-200);
+	--color-primary-300: var(--color-teal-300);
+	--color-primary-400: var(--color-teal-400);
+	--color-primary-500: var(--color-teal-500);
+	--color-primary-600: var(--color-teal-600);
+	--color-primary-700: var(--color-teal-700);
+	--color-primary-800: var(--color-teal-800);
+	--color-primary-900: var(--color-teal-900);
+
+	--color-onPrimary: #fff;
+
+	--color-codeContainer: color-mix(in srgb, transparent, var(--color-onSurface) 7%);
+}
+
+@layer base {
+	html {
+		font-family: Tahoma, sans-serif;
+		background: var(--color-surface);
+		color: var(--color-onSurface);
+		line-height: 1.5;
+	}
+
+	code {
+		font-family: "Courier New", Courier, monospace;
+		background: var(--color-codeContainer);
+	}
+
+	small {
+		font-size: 80%;
+		opacity: var(--soft);
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	.WrappingGrid {
+		--min-column-width: 250px;
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min-column-width)), 1fr));
+	}
+
+	.Card {
+		background: var(--color-surfaceContainer);
+		color: var(--color-onSurfaceContainer);
+		border-radius: .4em;
+		overflow: hidden;
+
+		box-shadow: 0 0 .5em #0002;
+		transition: box-shadow .1s;
+		contain: content;
+	}
+
+	a.Card:hover {
+		box-shadow: 0 0 .5em #0003;
+	}
+
+	a.Card:active {
+		box-shadow: 0 0 .5em #0005;
+	}
+
+	a.Card::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: currentColor;
+		opacity: 0;
+		transition: opacity var(--default-transition-duration);
+		z-index: -1;
+	}
+
+	a.Card:hover::before {
+		opacity: calc(.8 / 12);
+	}
+
+	a.Card:active::before {
+		opacity: calc(.8 / 12 * 2);
+	}
+}
+
+@layer utilities {
+	.nearest-neighbor {
+		-ms-interpolation-mode: nearest-neighbor;
+		image-rendering: crisp-edges;
+		image-rendering: pixelated;
+	  }
+}

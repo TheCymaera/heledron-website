@@ -12,23 +12,23 @@
 	<link rel="canonical" href="https://heledron.com/"/>
 	<meta property="og:image" content="https://heledron.com/thumbnail.webp"/>
 	<link rel="icon" href="/favicon.png" type="image/png"/>
-
-	<!-- scripts -->
-	<script type="module" src="/error-pages/main.ts"></script>
+	<link rel="stylesheet" href="./theme.css">
 </head>
-<body class="center">
+<body class="flex flex-col items-center justify-center h-screen gap-3">
 	<div>
-		Not Found
+		<h1 class="text-6xl font-bold text-center grid grid-cols-[1fr_auto_1fr] items-end gap-2">
+			<span></span>
+
+			<span>
+				404
+			</span>
+
+			<span class="text-2xl text-center opacity-80">
+				Not Found
+			</span>
+		</h1>
 	</div>
 
-	<div id="boxContainer">
-		<div class="center">4</div>
-		<div class="center">0</div>
-		<div class="center">4</div>
-	</div>
-	
-	<div>
-		<a href="/">Return to home</a>
-	</div>
+	<a href="/" class="text-primary-500 underline">Return to home</a>
 </body>
 </html>
