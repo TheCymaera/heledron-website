@@ -39,7 +39,7 @@
 
 	small {
 		font-size: 80%;
-		opacity: var(--soft);
+		opacity: 80%;
 	}
 
 	* {

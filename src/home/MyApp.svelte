@@ -275,21 +275,25 @@ globalThis.addEventListener?.("hashchange", () => urlHash = location.hash);
 			Current Project: <code><a href="https://youtu.be/uZmEYYs0ZKs" target="_blank" class="text-primary-600">https://youtu.be/uZmEYYs0ZKs</a></code>
 		</div>
 
-		<div class="flex justify-center gap-4 text-lg">
+		<div class="flex justify-center gap-4">
 			<div class="grid grid-cols-[repeat(2,1fr)] bg-surfaceContainer text-onSurfaceContainer rounded-full">
 				{#each tabs as tab}
 					{@const isActive = tab.hash === hash}
-					{@const activeClasses = "cursor-default bg-primary-600 text-onPrimary"}
+					{@const activeClasses = "cursor-default bg-primary-600! text-onPrimary"}
 					<a 
 						href={tab.hash} 
 						class="
 							text-center
-							text-lg 
 							opacity-80 
-							px-6 py-1 rounded-full
+							px-7 py-1 rounded-full
 							transition-colors
-							{isActive ? activeClasses : ""}"
-					>{tab.label}</a>
+							hover:bg-onSurfaceContainer/5
+							active:bg-onSurfaceContainer/5
+							{isActive ? activeClasses : ""}
+						"
+					>
+						{tab.label}
+					</a>
 				{/each}
 			</div>
 		</div>
@@ -324,7 +328,7 @@ globalThis.addEventListener?.("hashchange", () => urlHash = location.hash);
 			{#each socials as social}
 				<a class="Card flex flex-col justify-center items-center gap-2 aspect-square" target={social.target} href={social.href}>
 					<i class="grid place-items-center height-4 width-4 text-3xl">{@html social.icon}</i>
-					<span>{social.label}</span>
+					<span class="text-sm">{social.label}</span>
 				</a>
 			{/each}
 		</nav>
