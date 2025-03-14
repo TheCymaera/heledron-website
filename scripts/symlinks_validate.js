@@ -29,7 +29,7 @@ for (const [_, inputPath] of Object.entries(symlinks)) {
 
 async function scanRepo(inputPath, fetch = false) {
 	try {
-		const repositoryPath = Deno.realPathSync(inputFolder + inputPath + "/../");
+		const repositoryPath = Deno.realPathSync(inputFolder + inputPath.split("/").shift());
 		const buildPath = Deno.realPathSync(inputFolder + inputPath);
 
 		// fetch updates

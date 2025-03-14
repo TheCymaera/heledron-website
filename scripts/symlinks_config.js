@@ -9,7 +9,7 @@ export const symlinks = {
 	"misc/sorting-algorithm-visualizer": "sorting-algorithm-visualizer/dist",
 
 
-	"tools/emcl-compiler"              : "emcl-compiler/app-web",
+	"tools/emcl-compiler"              : "emcl-compiler/dist/web-app",
 	"tools/file-converter"             : "file-converter/dist",
 	"tools/image-folder-resizer"       : "image-folder-resizer/dist",
 	"tools/pixel-text-generator"       : "pixel-text-generator/dist",
