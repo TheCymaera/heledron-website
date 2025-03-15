@@ -1,101 +1,116 @@
 <script lang="ts">
 import { fa5_brands_discord, fa5_brands_github, fa5_brands_instagram, fa5_brands_redditAlien, fa5_brands_tiktok, fa5_brands_twitter, fa5_brands_youtube, fa5_solid_envelope, fa6_brands_bluesky } from "fontawesome-svgs";
 
+import QRCodeGeneratorThumbnail          from "../../external/symlinks/tools/qr-code-generator/thumbnail.webp?w=512&format=webp";
+import ImageFolderResizerThumbnail       from "../../external/symlinks/tools/image-folder-resizer/thumbnail.webp?w=512&format=webp"
+import FileConverterThumbnail            from "../../external/symlinks/tools/file-converter/thumbnail.webp?w=512&format=webp"
+import VisualAcuityTestThumbnail         from "../../external/symlinks/tools/visual-acuity-test/thumbnail.webp?w=512&format=webp"
+import BoidsThumbnail                    from "../../external/symlinks/misc/boids/thumbnail.webp?w=512&format=webp"
+import SortingAlgorithmThumbnail         from "../../external/symlinks/misc/sorting-algorithm-visualizer/thumbnail.webp?w=512&format=webp"
+import KinematicChainThumbnail           from "../../external/symlinks/misc/kinematic-chain/thumbnail.webp?w=512&format=webp"
+import DoublePendulumThumbnail           from "../../external/symlinks/misc/double-pendulum/thumbnail.webp?w=512&format=webp"
+import UniversalTimeThumbnail            from "../../external/symlinks/tools/universal-time/thumbnail.webp?w=512&format=webp"
+import EMCLCompilerThumbnail             from "../../external/symlinks/tools/emcl-compiler/thumbnail.webp?w=512&format=webp"
+import ReuleauxPolygonGeneratorThumbnail from "../../external/symlinks/tools/reuleaux-polygon-generator/thumbnail.webp?w=512&format=webp"
+import PixelTextGeneratorThumbnail       from "../../external/symlinks/tools/pixel-text-generator/thumbnail.webp?w=512&format=webp"
+import SuvatCalculatorThumbnail          from "../../external/symlinks/tools/suvat-calculator/thumbnail.webp?w=512&format=webp"
+import Ascii3DThumbnail                  from "../../external/symlinks/misc/ascii3d/demos/water/thumbnail.webp?w=512&format=webp"
+
 const tools = [
 	{
 		href: "./tools/qr-code-generator/",
-		imageSrc: "./tools/qr-code-generator/thumbnail-resized-512.webp",
+		imageSrc: QRCodeGeneratorThumbnail,
 		title: "QR Code Generator",
 		details: "Generate QR Codes.",
 	},
 	
 	{
 		href: "./tools/image-folder-resizer/",
-		imageSrc: "./tools/image-folder-resizer/thumbnail-resized-512.webp",
+		imageSrc: ImageFolderResizerThumbnail,
 		title: "Image Folder Resizer",
 		details: "Batch resize images inside a folder hierarchy.",
 	},
 	
 	{
 		href: "./tools/file-converter/",
-		imageSrc: "./tools/file-converter/thumbnail-resized-512.webp",
+		imageSrc: FileConverterThumbnail,
 		title: "File Converter",
 		details: "Convert audio, image and video formats.",
 	},
 	
 	{
 		href: "./tools/visual-acuity-test/",
-		imageSrc: "./tools/visual-acuity-test/thumbnail-resized-512.webp",
+		imageSrc: VisualAcuityTestThumbnail,
 		title: "Visual Acuity Test",
 		details: "Randomized eye test.",
 	},
 	
 	{
 		href: "./misc/boids/",
-		imageSrc: "./misc/boids/thumbnail-resized-512.webp",
+		imageSrc: BoidsThumbnail,
 		title: "Boids",
 		details: "Flocking Simulation.",
 	},
 	
 	{
 		href: "./misc/sorting-algorithm-visualizer/",
-		imageSrc: "./misc/sorting-algorithm-visualizer/thumbnail-resized-512.webp",
+		imageSrc: SortingAlgorithmThumbnail,
 		title: "Sorting Algorithm Visualizer",
 		details: "Visualize Sorting Algorithms.",
 	},
 	
 	{
 		href: "./misc/kinematic-chain/",
-		imageSrc: "./misc/kinematic-chain/thumbnail-resized-512.webp",
+		imageSrc: KinematicChainThumbnail,
 		title: "Kinematic Chain",
 		details: "Kinematic Chain simulation.",
 	},
 	
 	{
 		href: "./misc/double-pendulum/",
-		imageSrc: "./misc/double-pendulum/thumbnail-resized-512.webp",
+		imageSrc: DoublePendulumThumbnail,
 		title: "Double Pendulum",
 		details: "Double Pendulum physics simulation.",
 	},
 	
 	{
 		href: "./tools/universal-time/",
-		imageSrc: "./tools/universal-time/thumbnail-resized-512.webp",
+		imageSrc: UniversalTimeThumbnail,
 		title: "Universal Time",
 		details: "Share date times across timezones.",
 	},
 	
 	{
 		href: "./tools/emcl-compiler/",
-		imageSrc: "./tools/emcl-compiler/thumbnail-resized-512.webp",
+		imageSrc: EMCLCompilerThumbnail,
 		title: "EMCL Compiler",
 		details: "A compiler for Minecraft functions.",
 	},
 	
 	{
 		href: "./tools/reuleaux-polygon-generator/",
-		imageSrc: "./tools/reuleaux-polygon-generator/thumbnail-resized-512.webp",
+		imageSrc: ReuleauxPolygonGeneratorThumbnail,
 		title: "Reuleaux Polygon Generator",
 		details: "Generate figures of constant width.",
 	},
 	
 	{
 		href: "./tools/pixel-text-generator/",
-		imageSrc: "./tools/pixel-text-generator/thumbnail-resized-512.webp",
+		imageSrc: PixelTextGeneratorThumbnail,
 		title: "Pixel Text Generator",
 		details: "Generate pixel text of various styles.",
 	},
 	
 	{
 		href: "./tools/suvat-calculator/",
-		imageSrc: "./tools/suvat-calculator/thumbnail-resized-512.webp",
+		imageSrc: SuvatCalculatorThumbnail,
 		title: "SUVAT Calculator",
 		details: "Automatically solve SUVAT equations.",
 	},
 	
 	{
 		href: "./misc/ascii3d/demos/water/",
-		imageSrc: "./misc/ascii3d/demos/water/thumbnail-resized-512.webp",
+		imageSrc: Ascii3DThumbnail,
 		title: "Ascii 3D Water Demo",
 		details: "A text-based 3D renderer for JavaScript.",
 	},

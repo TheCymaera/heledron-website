@@ -21,7 +21,7 @@
 
 	--color-onPrimary: #fff;
 
-	--color-codeContainer: color-mix(in srgb, transparent, var(--color-onSurface) 7%);
+	--color-codeContainer: color-mix(in srgb, transparent, var(--color-onSurface) 5%);
 }
 
 @layer base {

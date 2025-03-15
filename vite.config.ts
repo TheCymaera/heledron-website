@@ -1,10 +1,11 @@
-import { createServer, defineConfig, type ViteDevServer } from "vite";
+import { createServer, defineConfig } from "vite";
 import { serveDirectoryPlugin } from "./vite-plugins/serveDirectoryPlugin.js";
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import tailwindcss from '@tailwindcss/vite'
 import path from "path";
 import { sitemapPlugin } from "./vite-plugins/sitemapPlugin.js";
 import { render } from "svelte/server";
+import { imagetools } from 'vite-imagetools'
 
 const root = path.resolve(__dirname, "src");
 
@@ -35,6 +36,7 @@ export default defineConfig({
 		serveDirectoryPlugin(["external/symlinks"]),
 		sitemapPlugin({ hostname: "https://heledron.com" }),
 		tailwindcss(),
+		imagetools(),
 		svelte({
 			configFile: path.resolve(__dirname, "svelte.config.js"),
 		}),
