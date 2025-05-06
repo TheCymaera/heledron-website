@@ -180,6 +180,10 @@ function youtubeThumbnail(href: string) {
 
 const youtubeVideos = [
 	{
+		title: "Working Globe Hologram in Minecraft",
+		href: "https://youtu.be/ae_Gns9ZBqY",
+	},
+	{
 		title: "Arbitrary Colors in Minecraft",
 		href: "https://youtu.be/uZmEYYs0ZKs",
 	},
