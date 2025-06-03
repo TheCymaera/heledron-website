@@ -180,6 +180,10 @@ function youtubeThumbnail(href: string) {
 
 const youtubeVideos = [
 	{
+		title: "3D Meshes with Text Displays in Minecraft",
+		href: "https://youtu.be/RnLWLQsh9mw",
+	},
+	{
 		title: "Working Globe Hologram in Minecraft",
 		href: "https://youtu.be/ae_Gns9ZBqY",
 	},
