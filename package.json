@@ -5,9 +5,9 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "validate": "deno run --allow-read --allow-run=git scripts/symlinks_validate.js",
-    "validate-w-fetch": "deno run --allow-read --allow-run=git scripts/symlinks_validate.js --fetch",
-    "create-symlinks": "deno run --allow-read --allow-write scripts/symlinks_create.js",
+    "validate": "bun scripts/symlinks_validate.js",
+    "validate-w-fetch": "bun scripts/symlinks_validate.js --fetch",
+    "create-symlinks": "bun scripts/symlinks_create.js",
     "deploy": "./scripts/deploy.sh"
   },
   "devDependencies": {

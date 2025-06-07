@@ -1,7 +1,10 @@
 import { symlinks, inputFolder } from "./symlinks_config.js";
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
 // get flag from command line
-const doFetch = Deno.args.includes("--fetch");
+const doFetch = process.argv.includes("--fetch");
 
 console.log(`Validating repositories... (fetch: ${doFetch})`);
 
@@ -29,29 +32,30 @@ for (const [_, inputPath] of Object.entries(symlinks)) {
 
 async function scanRepo(inputPath, fetch = false) {
 	try {
-		const repositoryPath = Deno.realPathSync(inputFolder + inputPath.split("/").shift());
-		const buildPath = Deno.realPathSync(inputFolder + inputPath);
+		const repositoryPath = fs.realpathSync(inputFolder + inputPath.split("/").shift());
+		const buildPath = fs.realpathSync(inputFolder + inputPath);
 
 		// fetch updates
 		if (fetch) {
-			Deno.chdir(repositoryPath);
-			await new Deno.Command("git", { args: ["fetch"] }).output();
+			process.chdir(repositoryPath);
+			execSync("git fetch");
 		}
 
-		Deno.chdir(repositoryPath);
-		const gitStatus = await new Deno.Command("git", { args: ["status"], stdout: "piped" }).output();
+		process.chdir(repositoryPath);
+		const gitStatus = execSync("git status", { encoding: 'utf8' });
 		
-		Deno.chdir(repositoryPath);
-		const lastCommitOutput = await new Deno.Command("git", { args: ["log", "-1", "--format=%cd"], stdout: "piped" }).output();
+		process.chdir(repositoryPath);
+		const lastCommitOutput = execSync("git log -1 --format=%cd", { encoding: 'utf8' });
 
-		const gitStatusDecoded = new TextDecoder("utf-8").decode(gitStatus.stdout);
-		const gitIsUpToDate = gitStatusDecoded.includes("Your branch is up to date with 'origin/master'");
-		const noUnStagedChanges = !gitStatusDecoded.includes("Changes not staged for commit");
+		const gitIsUpToDate = 
+			gitStatus.includes("Your branch is up to date with 'origin/master'") ||
+			gitStatus.includes("Your branch is up to date with 'origin/main'");
+		const noUnStagedChanges = !gitStatus.includes("Changes not staged for commit");
 
-		const lastCommitOutputDecoded = new TextDecoder("utf-8").decode(lastCommitOutput.stdout);
-		const lastCommit = new Date(lastCommitOutputDecoded);
+		const lastCommit = new Date(lastCommitOutput);
 
-		const lastBuild = Deno.statSync(buildPath).mtime;
+		const stats = fs.statSync(buildPath);
+		const lastBuild = stats.mtime;
 
 		const buildIsUpToDate = lastCommit <= lastBuild;
 
@@ -65,5 +69,6 @@ async function scanRepo(inputPath, fetch = false) {
 	}
 	catch (error) {
 		console.error(error);
+		return null;
 	}
 }

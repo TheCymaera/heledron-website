@@ -18,4 +18,5 @@ export const symlinks = {
 	"tools/suvat-calculator"           : "suvat-calculator/dist",
 	"tools/universal-time"             : "universal-time/dist",
 	"tools/visual-acuity-test"         : "visual-acuity-test/dist",
+	"tools/text-display-mesher"        : "text-display-mesher/dist",
 }

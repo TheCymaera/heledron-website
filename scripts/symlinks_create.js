@@ -1,16 +1,18 @@
-// deno run --allow-read --allow-write createSymlinks.js
+// node symlinks_create_node.js
 
 import { symlinks, inputFolder, outputFolder } from "./symlinks_config.js";
+import fs from 'fs';
+import path from 'path';
 
 for (const [outputPath, inputPath] of Object.entries(symlinks)) {
 	try {
-		const inputFile = Deno.realPathSync(inputFolder + inputPath);
+		const inputFile = fs.realpathSync(inputFolder + inputPath);
 		const outputFile = outputFolder + outputPath;
 
 		const parentFolder = outputFile.substring(0, outputFile.lastIndexOf("/"));
-		Deno.mkdirSync(parentFolder, { recursive: true });
+		fs.mkdirSync(parentFolder, { recursive: true });
 
-		Deno.symlinkSync(inputFile, outputFile);
+		fs.symlinkSync(inputFile, outputFile);
 	}
 	catch (error) {
 		console.error(error + "\n" + inputFolder + inputPath + "\n -> " + outputFolder + outputPath);
