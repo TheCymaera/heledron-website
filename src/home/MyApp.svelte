@@ -1,6 +1,7 @@
 <script lang="ts">
 import { fa5_brands_discord, fa5_brands_github, fa5_brands_instagram, fa5_brands_redditAlien, fa5_brands_tiktok, fa5_brands_twitter, fa5_brands_youtube, fa5_solid_envelope, fa6_brands_bluesky } from "fontawesome-svgs";
 
+import MandelbrotThumbnail               from "../../external/symlinks/misc/mandelbrot/thumbnail.webp?w=512&format=webp";
 import TextDisplayMesherThumbnail        from "../../external/symlinks/tools/text-display-mesher/thumbnail.webp?w=512&format=webp";
 import QRCodeGeneratorThumbnail          from "../../external/symlinks/tools/qr-code-generator/thumbnail.webp?w=512&format=webp";
 import ImageFolderResizerThumbnail       from "../../external/symlinks/tools/image-folder-resizer/thumbnail.webp?w=512&format=webp"
@@ -18,6 +19,12 @@ import SuvatCalculatorThumbnail          from "../../external/symlinks/tools/suv
 import Ascii3DThumbnail                  from "../../external/symlinks/misc/ascii3d/demos/water/thumbnail.webp?w=512&format=webp"
 
 const tools = [
+	{
+		href: "./misc/mandelbrot/",
+		imageSrc: MandelbrotThumbnail,
+		title: "6D Mandelbrot Set Explorer",
+		details: "Visualize the Mandelbrot set in 6D space."
+	},
 	{
 		href: "./tools/text-display-mesher/",
 		imageSrc: TextDisplayMesherThumbnail,
