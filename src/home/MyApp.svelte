@@ -195,6 +195,10 @@ function youtubeThumbnail(href: string) {
 
 const youtubeVideos = [
 	{
+		title: "6D Mandelbrot in Vanilla Minecraft",
+		href: "https://youtu.be/aLR4YpTnM6c",
+	},
+	{
 		title: "3D Meshes with Text Displays in Minecraft",
 		href: "https://youtu.be/RnLWLQsh9mw",
 	},
