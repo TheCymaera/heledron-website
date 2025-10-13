@@ -5,10 +5,10 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "validate": "bun scripts/symlinks_validate.js",
-    "validate-w-fetch": "bun scripts/symlinks_validate.js --fetch",
-    "create-symlinks": "bun scripts/symlinks_create.js",
-    "deploy": "./scripts/deploy.sh"
+    "validate": "bun scripts/symlinks_validate.ts",
+    "validate-w-fetch": "bun scripts/symlinks_validate.ts --fetch",
+    "create-symlinks": "bun scripts/symlinks_create.ts",
+    "deploy": "bun scripts/deploy.ts"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^5.0.3",

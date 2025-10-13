@@ -1,8 +1,6 @@
-// node symlinks_create_node.js
-
-import { symlinks, inputFolder, outputFolder } from "./symlinks_config.js";
+#!/usr/bin/env bun
+import { symlinks, inputFolder, outputFolder } from "./utilities/symlinks_config.js";
 import fs from 'fs';
-import path from 'path';
 
 for (const [outputPath, inputPath] of Object.entries(symlinks)) {
 	try {

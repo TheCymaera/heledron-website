@@ -87,7 +87,7 @@ async function compileAndImportTemporaryModule(modulePath: string) {
 
 	const module = await import(path.join(compileDir, "ssr.js"));
 
-	await fs.rmdir(compileDir, { recursive: true });
+	await fs.rm(compileDir, { recursive: true });
 
 	return module;
 }
