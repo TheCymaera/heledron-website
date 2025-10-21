@@ -174,12 +174,12 @@ const socials = [
 		icon: fa5_brands_github,
 		label: "GitHub",
 	},
-	{
-		target: "_blank",
-		href: "https://www.reddit.com/user/Cymaera/",
-		icon: fa5_brands_redditAlien,
-		label: "Reddit",
-	},
+	//{
+	//	target: "_blank",
+	//	href: "https://www.reddit.com/user/Cymaera/",
+	//	icon: fa5_brands_redditAlien,
+	//	label: "Reddit",
+	//},
 	{
 		target: "_top",
 		href: "mailto:cymaera@heledron.com",
