@@ -42,10 +42,9 @@ export default defineConfig({
 			name: "vite-plugin-svelte-ssr",
 			enforce: "post",
 			async transformIndexHtml(html, context) {
-				const componentPaths = {
+				const componentPaths: Record<string, string> = {
 					"/index.html": "/home/MyApp.svelte",
 				}
-				
 
 				const componentPath = componentPaths[context.path];
 				if (!componentPath) return html;
@@ -59,6 +58,7 @@ export default defineConfig({
 
 				// replace HTML
 				return html
+					.replace("<!-- ssr_head -->", result.head)
 					.replace("<!-- ssr_body -->", result.body);
 			}
 		}

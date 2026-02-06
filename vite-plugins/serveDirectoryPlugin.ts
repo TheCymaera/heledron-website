@@ -1,9 +1,8 @@
 import { type Plugin } from "vite";
 
-// @ts-ignore
 import * as fs from "fs";
 export function serveDirectoryPlugin(directories: string[]): Plugin {
-	const mimeTypes = {
+	const mimeTypes: Record<string, string> = {
 		".html": "text/html",
 		".js": "text/javascript",
 		".css": "text/css",
