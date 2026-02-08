@@ -300,19 +300,6 @@ globalThis.addEventListener?.("hashchange", () => urlHash = location.hash);
 	}
 }
 </style>
-<svelte:head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-	<title>Home - Heledron</title>
-	<meta name="author" content="Morgan"/>
-	<meta name="description" content="Heledron - Home Page"/>
-	<meta name="keywords" content="Heledron, Hadron, Cymaera"/>
-	<link rel="canonical" href="https://heledron.com/"/>
-	<meta property="og:image" content="https://heledron.com/thumbnail.webp"/>
-	
-	<link rel="icon" href="/favicon.png" type="image/png"/>
-</svelte:head>
 <div id="app" class="p-4">
 	<h1 class="text-center m-0 text-[300%] font-bold" style="grid-area: header;">
 		Heledron

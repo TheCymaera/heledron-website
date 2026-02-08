@@ -1,21 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+---
+import "./page.css";
 
-	<!-- info -->
-	<title>About Me</title>
-	<meta name="author" content="Morgan"/>
-	<meta name="description" content="Heledron - Home Page"/>
-	<meta name="keywords" content="Heledron, Hadron, Cymaera"/>
-	<link rel="canonical" href="https://heledron.com/"/>
-	<meta property="og:image" content="https://heledron.com/thumbnail.webp"/>
-	<link rel="icon" href="/favicon.png" type="image/png"/>
+import ERPDesktop from "./images/erp-desktop.png";
+import ERPMobile from "./images/erp-mobile.png";
+import Coconutsugar from "./images/coconutsugar.png";
+import OutlookAddin from "./images/outlook-addin.png";
 
-	<script type="module" src="./main.ts"></script>
-</head>
-<body>
+import Minecraft3DGrapher from "./images/minecraft-3d-grapher.jpg";
+import MinecraftFluidPhysics from "./images/minecraft-fluid-physics.jpg";
+import MinecraftGOL from "./images/minecraft-gol.jpg";
+import MinecraftSnakeGame from "./images/minecraft-snake-game.jpg";
+
+import GameEngine2DShooter from "./images/game-engine-2d-shooter.png";
+import GameEngineDeep from "./images/game-engine-deep.png";
+import ICECube from "./images/icecube.png";
+import Layout from "../../layouts/PageScaffold.astro";
+---
+<Layout
+	title="About Me - Heledron"
+	description="Heledron - CV"
+	keywords="Heledron, Hadron, Cymaera"
+	ogImage="https://heledron.com/thumbnail.webp"
+>
 	<div class="relative m-auto max-w-4xl p-6">
 		<h1 class="mt-0 pt-0">
 			Welcome!
@@ -26,8 +32,8 @@
 
 		<h2>ERP System</h2>
 		<div class="flex gap-4">
-			<img src="./images/erp-desktop.png" alt="ERP Desktop" class="shadow-md max-h-100 self-start">
-			<img src="./images/erp-mobile.png" alt="ERP Mobile" class="shadow-md max-h-100 self-start">
+			<img src={ERPDesktop.src} alt="ERP Desktop" class="shadow-md max-h-100 self-start">
+			<img src={ERPMobile.src} alt="ERP Mobile" class="shadow-md max-h-100 self-start">
 		</div>
 
 		<br>
@@ -68,7 +74,7 @@
 
 		<h2 class="break-before-page">Marketing / Landing Page</h2>
 		<div class="flex gap-4">
-			<img src="./images/coconutsugar.png" alt="ERP Desktop" class="shadow-md max-h-100 self-start">
+			<img src={Coconutsugar.src} alt="ERP Desktop" class="shadow-md max-h-100 self-start">
 		</div>
 
 		<p>
@@ -78,7 +84,7 @@
 		
 		<h2 class="break-before-page">Outlook Add-in</h2>
 		<div class="flex gap-4">
-			<img src="./images/outlook-addin.png" alt="ERP Desktop" class="shadow-md max-h-100 self-start">
+			<img src={OutlookAddin.src} alt="ERP Desktop" class="shadow-md max-h-100 self-start">
 		</div>
 
 		<br>
@@ -152,25 +158,25 @@
 
 		<div class="grid gap-4 grid-cols-2">
 			<div class="Card shadow-md overflow-hidden">
-				<img class="w-full block" src="./images/minecraft-3d-grapher.jpg" alt="3D Grapher in Minecraft">
+				<img class="w-full block" src={Minecraft3DGrapher.src} alt="3D Grapher in Minecraft">
 				<div class="p-3">
 					A working animated 3D Grapher in Minecraft
 				</div>
 			</div>
 			<div class="Card shadow-md overflow-hidden">
-				<img class="w-full block" src="./images/minecraft-fluid-physics.jpg" alt="Fluid Physics in Minecraft">
+				<img class="w-full block" src={MinecraftFluidPhysics.src} alt="Fluid Physics in Minecraft">
 				<div class="p-3">
 					A fluid physics simulation in Minecraft
 				</div>
 			</div>
 			<div class="Card shadow-md overflow-hidden">
-				<img class="w-full block" src="./images/minecraft-gol.jpg" alt="Game of Life in Minecraft">
+				<img class="w-full block" src={MinecraftGOL.src} alt="Game of Life in Minecraft">
 				<div class="p-3">
 					Conway's Game of Life in Minecraft
 				</div>
 			</div>
 			<div class="Card shadow-md overflow-hidden">
-				<img class="w-full block" src="./images/minecraft-snake-game.jpg" alt="Snake Game in Minecraft">
+				<img class="w-full block" src={MinecraftSnakeGame.src} alt="Snake Game in Minecraft">
 				<div class="p-3">
 					The classic Snake Game in Minecraft
 				</div>
@@ -226,23 +232,22 @@
 
 		<h3>Game Engine</h3>
 		<div class="flex gap-4 flex-wrap relative items-start">
-			<img class="shadow-md block max-h-75" src="./images/2d-shooter.png" alt="Game Engine">
-			<img class="shadow-md nearest-neighbor block max-h-75" src="./images/deep.png" alt="Game Engine">
+			<img class="shadow-md block max-h-75" src={GameEngine2DShooter.src} alt="Game Engine">
+			<img class="shadow-md nearest-neighbor block max-h-75" src={GameEngineDeep.src} alt="Game Engine">
 		</div>
 		<br>
 
 		<p>
 			I developed a 2D game engine in JavaScript and made a few simple games with it. I have since abandoned this project due to my evolving standards for code quality and it would be easier to start from scratch. Since then, I have experimented with similar projects by building 3D rendering pipelines, and working with OpenGL and WebGL.
 		</p>
-	
+
 		<h3 class="break-before-page">ICECube (Code Editor)</h3>
-		<img class="w-full block" src="./images/icecube.png" alt="ICECube IDE">
-	
+		<img class="w-full block" src={ICECube.src} alt="ICECube IDE">
+
 		<p>
 			ICECube is a code editor I developed a long time ago. It had a web version using the then-new File System Access API, and an Electron.js version which I never released publicly.
 			It included a code-editor with syntax highlighting, a JSON editor capable of editing complex nested JSON objects defined by a schema, and multiple graphical editors all built from scratch.
 			It was abandoned due to lack of users, and my improved standards for code quality and UX. As my first major application with a large codebase, it allowed me to experiment with many new technologies and programming patterns.
 		</p>
 	</div>
-</body>
-</html>
+</Layout>

@@ -32,6 +32,10 @@ export function serveDirectoryPlugin(directories: string[]): Plugin {
 		".7z": "application/x-7z-compressed",
 	}
 
+	const ignorePattern = (filePath: string) => {
+		return filePath.endsWith(".DS_Store");
+	}
+
 	const indices = [
 		"index.html",
 	]
@@ -70,6 +74,10 @@ export function serveDirectoryPlugin(directories: string[]): Plugin {
 				copyRecursively(src, dst);
 
 				function copyRecursively(src: string, dst: string) {
+					if (ignorePattern(src)) {
+						return;
+					}
+
 					if (fs.statSync(src).isDirectory()) {
 						// folder
 						if (!fs.existsSync(dst)) {

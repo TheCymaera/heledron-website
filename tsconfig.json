@@ -1,25 +1,5 @@
 {
-	"compilerOptions": {
-		"module": "NodeNext",
-		"target": "ESNext",
-
-		"moduleResolution": "nodenext",
-		
-		"strictNullChecks": true,
-		"noImplicitThis": true,
-		"noImplicitReturns": true,
-		"noUncheckedIndexedAccess": true,
-		"alwaysStrict": true,
-
-		"isolatedModules": true,
-		"verbatimModuleSyntax": true,
-		"preserveConstEnums": true,
-
-		"skipDefaultLibCheck": true,
-
-		"noEmit": true,
-
-		"lib": ["ES2020", "DOM", "DOM.Iterable"],
-		"skipLibCheck": true,
-	}
+	"extends": "astro/tsconfigs/strict",
+	"include": [".astro/types.d.ts", "**/*"],
+	"exclude": ["dist"]
 }

@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/PageScaffold.astro';
+import { fa5_solid_home } from "fontawesome-svgs";
+const statusCode = 404;
+const error = new Error("Not Found");
+---
+<Layout
+	title={`${statusCode} - ${error.message}`}
+	description={`${statusCode} - ${error.message}`}
+	keywords="Heledron, Hadron, Cymaera"
+	ogImage="https://heledron.com/thumbnail.webp"
+>
+	<div class="absolute inset-0 flex flex-col items-center justify-center min-h-full">
+		<h2 class="text-3xl font-bold">
+			<span class="text-6xl text-red-700">{statusCode}</span> - {error.message}
+		</h2>
+
+		<hr class="m-3 w-96 border-transparent opacity-10" />
+
+		<a href="/" class="text-primary-600"><Fragment set:html={fa5_solid_home} /> Go back to home page</a>
+	</div>
+</Layout>
