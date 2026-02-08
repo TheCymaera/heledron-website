@@ -1,13 +1,13 @@
 export const inputFolder = "../";
 export const outputFolder = "./external/symlinks/";
 export const symlinks = {
-	// output: input
+	// url path : build folder path
 	"misc/ascii3d/demos"               : "ascii3d-demos/dist",
 	"misc/boids"                       : "boids/dist",
 	"misc/double-pendulum"             : "double-pendulum/dist",
 	"misc/kinematic-chain"             : "kinematic-chain/dist",
 	"misc/sorting-algorithm-visualizer": "sorting-algorithm-visualizer/dist",
-
+	"misc/mandelbrot"                  : "mandelbrot/dist",
 
 	"tools/emcl-compiler"              : "emcl-compiler/dist/web-app",
 	"tools/file-converter"             : "file-converter/dist",
@@ -19,5 +19,4 @@ export const symlinks = {
 	"tools/universal-time"             : "universal-time/dist",
 	"tools/visual-acuity-test"         : "visual-acuity-test/dist",
 	"tools/text-display-mesher"        : "text-display-mesher/dist",
-	"misc/mandelbrot"                  : "mandelbrot/dist",
 }

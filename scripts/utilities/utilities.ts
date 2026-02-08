@@ -25,7 +25,7 @@ export async function execWithOutput(command: string): Promise<void> {
 	return new Promise((resolve, reject) => {
 		const child = spawn(command, {
 			shell: true,
-			stdio: 'inherit' // This streams output directly to parent process
+			stdio: 'inherit' // This streams output directly to the parent process
 		});
 
 		child.on('close', (code) => {
@@ -57,6 +57,7 @@ export async function getRepoInfo(inputPath: string, fetch = false) {
 		const gitIsUpToDate = 
 			gitStatus.includes("Your branch is up to date with 'origin/master'") ||
 			gitStatus.includes("Your branch is up to date with 'origin/main'");
+
 		const noUnStagedChanges = !gitStatus.includes("Changes not staged for commit");
 
 		const lastCommit = new Date(lastCommitOutput);
