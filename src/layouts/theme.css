@@ -5,9 +5,10 @@
 	--color-surface: #eee;
 	--color-onSurface: #333;
 
-	--color-surfaceContainer: #fff;
-	--color-onSurfaceContainer: #333;
-
+	--color-container: #fff;
+	--color-onContainer: #333;
+	--color-containerHover: color-mix(in srgb, transparent, var(--color-onSurface) 3%);
+	--color-containerActive: color-mix(in srgb, transparent, var(--color-onSurface) 12%);
 
 	--color-primary-100: var(--color-teal-100);
 	--color-primary-200: var(--color-teal-200);
@@ -22,6 +23,9 @@
 	--color-onPrimary: #fff;
 
 	--color-codeContainer: color-mix(in srgb, transparent, var(--color-onSurface) 5%);
+
+	--outline-width: 2.5px;
+	--outline-offset: 2.5px;
 }
 
 @layer base {
@@ -44,6 +48,14 @@
 
 	* {
 		box-sizing: border-box;
+		outline-offset: var(--outline-offset);
+		outline-width: var(--outline-width);
+		outline-color: transparent;
+	}
+
+	:where(:focus-visible) {
+		outline-style: solid;
+		outline-color: var(--color-primary-500);
 	}
 
 	.WrappingGrid {
@@ -54,47 +66,37 @@
 	}
 
 	.Card {
-		background: var(--color-surfaceContainer);
-		color: var(--color-onSurfaceContainer);
+		background: var(--color-container);
+		color: var(--color-onContainer);
 		border-radius: .4em;
 		overflow: hidden;
 
 		box-shadow: 0 0 .5em #0002;
 		transition: box-shadow .1s;
 		contain: content;
+
+		outline-offset: calc(var(--outline-width) * -1);
 	}
 
-	a.Card:hover {
-		box-shadow: 0 0 .5em #0003;
-	}
+	a.Card {
+		transition: box-shadow .1s ease, background-color .1s ease;
 
-	a.Card:active {
-		box-shadow: 0 0 .5em #0005;
-	}
+		@media (hover: hover) {
+			&:hover {
+				box-shadow: 0 0 .5em #0003;
+				background: var(--color-containerHover);
+			}
+		}
 
-	a.Card::before {
-		content: "";
-		position: absolute;
-		inset: 0;
-		background: currentColor;
-		opacity: 0;
-		transition: opacity var(--default-transition-duration);
-		z-index: -1;
-	}
-
-	a.Card:hover::before {
-		opacity: calc(.8 / 12);
-	}
-
-	a.Card:active::before {
-		opacity: calc(.8 / 12 * 2);
+		&:active {
+			box-shadow: 0 0 .5em #0005;
+			background: var(--color-containerActive);
+		}
 	}
 }
 
-@layer utilities {
-	.nearest-neighbor {
-		-ms-interpolation-mode: nearest-neighbor;
-		image-rendering: crisp-edges;
-		image-rendering: pixelated;
-	  }
+@utility nearest-neighbor {
+	-ms-interpolation-mode: nearest-neighbor;
+	image-rendering: crisp-edges;
+	image-rendering: pixelated;
 }

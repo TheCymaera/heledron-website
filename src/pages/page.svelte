@@ -318,20 +318,22 @@ globalThis.addEventListener?.("hashchange", () => urlHash = location.hash);
 		</div>
 
 		<div class="flex justify-center gap-4">
-			<div class="grid grid-cols-[repeat(2,1fr)] bg-surfaceContainer text-onSurfaceContainer rounded-full">
+			<div class="grid grid-cols-[repeat(2,1fr)] bg-container text-onContainer rounded-full">
 				{#each tabs as tab}
 					{@const isActive = tab.hash === hash}
 					{@const activeClasses = "cursor-default bg-primary-600! text-onPrimary"}
+					{@const notActiveClasses = "outline-offset-0"}
 					<a 
 						href={tab.hash} 
 						class="
 							text-center
 							opacity-80 
 							px-7 py-1 rounded-full
-							transition-colors
-							hover:bg-onSurfaceContainer/5
-							active:bg-onSurfaceContainer/5
-							{isActive ? activeClasses : ""}
+							hover:bg-onContainer/5
+							active:bg-onContainer/5
+							transition-[background-color,color,outline-offset]
+							will-change-[background-color,color,outline-offset]
+							{isActive ? activeClasses : notActiveClasses}
 						"
 					>
 						{tab.label}
