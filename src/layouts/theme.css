@@ -7,8 +7,8 @@
 
 	--color-container: #fff;
 	--color-onContainer: #333;
-	--color-containerHover: color-mix(in srgb, transparent, var(--color-onSurface) 3%);
-	--color-containerActive: color-mix(in srgb, transparent, var(--color-onSurface) 12%);
+	--color-containerHover: color-mix(in srgb, var(--color-container), var(--color-onContainer) 6.5%);
+	--color-containerActive: color-mix(in srgb, var(--color-container), var(--color-onContainer) 12%);
 
 	--color-primary-100: var(--color-teal-100);
 	--color-primary-200: var(--color-teal-200);
@@ -68,10 +68,10 @@
 	.Card {
 		background: var(--color-container);
 		color: var(--color-onContainer);
-		border-radius: .4em;
+		border-radius: var(--radius-md);
 		overflow: hidden;
 
-		box-shadow: 0 0 .5em #0002;
+		box-shadow: 0 0 .5rem #0002;
 		transition: box-shadow .1s;
 		contain: content;
 
@@ -79,17 +79,17 @@
 	}
 
 	a.Card {
-		transition: box-shadow .1s ease, background-color .1s ease;
+		transition: box-shadow .15s ease, background-color .15s ease;
 
 		@media (hover: hover) {
 			&:hover {
-				box-shadow: 0 0 .5em #0003;
+				box-shadow: 0 0 .5rem #0003;
 				background: var(--color-containerHover);
 			}
 		}
 
 		&:active {
-			box-shadow: 0 0 .5em #0005;
+			box-shadow: 0 0 .5rem #0005;
 			background: var(--color-containerActive);
 		}
 	}

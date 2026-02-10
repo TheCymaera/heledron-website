@@ -329,8 +329,8 @@ globalThis.addEventListener?.("hashchange", () => urlHash = location.hash);
 							text-center
 							opacity-80 
 							px-7 py-1 rounded-full
-							hover:bg-onContainer/5
-							active:bg-onContainer/5
+							hover:bg-containerHover
+							active:bg-containerActive
 							transition-[background-color,color,outline-offset]
 							will-change-[background-color,color,outline-offset]
 							{isActive ? activeClasses : notActiveClasses}
