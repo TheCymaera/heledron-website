@@ -306,14 +306,14 @@ globalThis.addEventListener?.("hashchange", () => urlHash = location.hash);
 	</h1>
 
 	<div class="flex flex-col gap-4" style="grid-area: main;">
-		<main class="Card p-4">
+		<main class="helion-card p-4">
 			<h2 class="text-xl font-bold">Welcome!</h2>
 			<p>
 				This is my personal website. I post my projects here, including free tools, packages, and more.
 			</p>
 		</main>
 
-		<div class="Card p-4 py-3">
+		<div class="helion-card p-4 py-3">
 			Current Project: <code><a href="https://youtu.be/uZmEYYs0ZKs" target="_blank" class="text-primary-600">https://youtu.be/uZmEYYs0ZKs</a></code>
 		</div>
 
@@ -342,9 +342,9 @@ globalThis.addEventListener?.("hashchange", () => urlHash = location.hash);
 			</div>
 		</div>
 
-		<nav class="WrappingGrid gap-4" style="--min-column-width: 250px;" hidden={tabs[0]!.hash !== hash}>
+		<nav class="helion-wrapping-grid gap-4" style="--min-column-width: 250px;" hidden={tabs[0]!.hash !== hash}>
 			{#each tools as tool}
-				<a class="Card" href={tool.href} target="_blank">
+				<a class="helion-card" href={tool.href} target="_blank">
 					<img src={tool.imageSrc} width="1200" height="630" loading="lazy" alt="thumbnail">
 					<div class="p-3 py-2 leading-5">
 						<h2 class="font-bold">{tool.title}</h2>
@@ -354,9 +354,9 @@ globalThis.addEventListener?.("hashchange", () => urlHash = location.hash);
 			{/each}
 		</nav>
 
-		<nav class="WrappingGrid gap-4" style="--min-column-width: 250px;" hidden={tabs[1]!.hash !== hash}>
+		<nav class="helion-wrapping-grid gap-4" style="--min-column-width: 250px;" hidden={tabs[1]!.hash !== hash}>
 			{#each youtubeVideos as video}
-				<a class="Card" href={video.href} target="_blank">
+				<a class="helion-card" href={video.href} target="_blank">
 					<img src={youtubeThumbnail(video.href)} width="1280" height="720" loading="lazy" alt="thumbnail">
 					<div class="p-3 py-2 leading-5">
 						<h2 class="font-bold">{video.title}</h2>
@@ -368,9 +368,9 @@ globalThis.addEventListener?.("hashchange", () => urlHash = location.hash);
 	</div>
 
 	<aside style="grid-area: sidebar">
-		<nav class="WrappingGrid gap-4 items-start" id="links" style="--min-column-width: 90px;">
+		<nav class="helion-wrapping-grid gap-4 items-start" id="links" style="--min-column-width: 90px;">
 			{#each socials as social}
-				<a class="Card flex flex-col justify-center items-center gap-2 aspect-square" target={social.target} href={social.href}>
+				<a class="helion-card flex flex-col justify-center items-center gap-2 aspect-square" target={social.target} href={social.href}>
 					<i class="grid place-items-center height-4 width-4 text-3xl">{@html social.icon}</i>
 					<span class="text-sm">{social.label}</span>
 				</a>

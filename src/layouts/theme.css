@@ -58,14 +58,15 @@
 		outline-color: var(--color-primary-500);
 	}
 
-	.WrappingGrid {
+	helion-wrapping-grid, .helion-wrapping-grid {
 		--min-column-width: 250px;
 
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min-column-width)), 1fr));
 	}
 
-	.Card {
+	helion-card, .helion-card {
+		display: block;
 		background: var(--color-container);
 		color: var(--color-onContainer);
 		border-radius: var(--radius-md);
@@ -78,7 +79,10 @@
 		outline-offset: calc(var(--outline-width) * -1);
 	}
 
-	a.Card {
+	button.helion-card, a.helion-card {
+		display: block;
+		text-decoration: inherit;
+		color: inherit;
 		transition: box-shadow .15s ease, background-color .15s ease;
 
 		@media (hover: hover) {
