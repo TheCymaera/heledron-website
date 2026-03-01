@@ -1,131 +1,138 @@
 <script lang="ts">
 import { fa5_brands_discord, fa5_brands_github, fa5_brands_instagram, fa5_brands_redditAlien, fa5_brands_tiktok, fa5_brands_twitter, fa5_brands_youtube, fa5_solid_envelope, fa6_brands_bluesky } from "fontawesome-svgs";
 
-import MandelbrotThumbnail               from "../../external/symlinks/misc/mandelbrot/thumbnail.webp?w=512&format=webp";
-import TextDisplayMesherThumbnail        from "../../external/symlinks/tools/text-display-mesher/thumbnail.webp?w=512&format=webp";
-import QRCodeGeneratorThumbnail          from "../../external/symlinks/tools/qr-code-generator/thumbnail.webp?w=512&format=webp";
-import ImageFolderResizerThumbnail       from "../../external/symlinks/tools/image-folder-resizer/thumbnail.webp?w=512&format=webp"
-import FileConverterThumbnail            from "../../external/symlinks/tools/file-converter/thumbnail.webp?w=512&format=webp"
-import VisualAcuityTestThumbnail         from "../../external/symlinks/tools/visual-acuity-test/thumbnail.webp?w=512&format=webp"
-import BoidsThumbnail                    from "../../external/symlinks/misc/boids/thumbnail.webp?w=512&format=webp"
-import SortingAlgorithmThumbnail         from "../../external/symlinks/misc/sorting-algorithm-visualizer/thumbnail.webp?w=512&format=webp"
-import KinematicChainThumbnail           from "../../external/symlinks/misc/kinematic-chain/thumbnail.webp?w=512&format=webp"
-import DoublePendulumThumbnail           from "../../external/symlinks/misc/double-pendulum/thumbnail.webp?w=512&format=webp"
-import UniversalTimeThumbnail            from "../../external/symlinks/tools/universal-time/thumbnail.webp?w=512&format=webp"
-import EMCLCompilerThumbnail             from "../../external/symlinks/tools/emcl-compiler/thumbnail.webp?w=512&format=webp"
-import ReuleauxPolygonGeneratorThumbnail from "../../external/symlinks/tools/reuleaux-polygon-generator/thumbnail.webp?w=512&format=webp"
-import PixelTextGeneratorThumbnail       from "../../external/symlinks/tools/pixel-text-generator/thumbnail.webp?w=512&format=webp"
-import SuvatCalculatorThumbnail          from "../../external/symlinks/tools/suvat-calculator/thumbnail.webp?w=512&format=webp"
-import Ascii3DThumbnail                  from "../../external/symlinks/misc/ascii3d/demos/water/thumbnail.webp?w=512&format=webp"
+import BuddhabrotThumbnail               from "../../external/symlinks/misc/buddhabrot/thumbnail.webp?w=300;512&format=webp&as=picture";
+import MandelbrotThumbnail               from "../../external/symlinks/misc/mandelbrot/thumbnail.webp?w=300;512&format=webp&as=picture";
+import TextDisplayMesherThumbnail        from "../../external/symlinks/tools/text-display-mesher/thumbnail.webp?w=300;512&format=webp&as=picture";
+import QRCodeGeneratorThumbnail          from "../../external/symlinks/tools/qr-code-generator/thumbnail.webp?w=300;512&format=webp&as=picture";
+import ImageFolderResizerThumbnail       from "../../external/symlinks/tools/image-folder-resizer/thumbnail.webp?w=300;512&format=webp&as=picture"
+import FileConverterThumbnail            from "../../external/symlinks/tools/file-converter/thumbnail.webp?w=300;512&format=webp&as=picture"
+import VisualAcuityTestThumbnail         from "../../external/symlinks/tools/visual-acuity-test/thumbnail.webp?w=300;512&format=webp&as=picture"
+import BoidsThumbnail                    from "../../external/symlinks/misc/boids/thumbnail.webp?w=300;512&format=webp&as=picture"
+import SortingAlgorithmThumbnail         from "../../external/symlinks/misc/sorting-algorithm-visualizer/thumbnail.webp?w=300;512&format=webp&as=picture"
+import KinematicChainThumbnail           from "../../external/symlinks/misc/kinematic-chain/thumbnail.webp?w=300;512&format=webp&as=picture"
+import DoublePendulumThumbnail           from "../../external/symlinks/misc/double-pendulum/thumbnail.webp?w=300;512&format=webp&as=picture"
+import UniversalTimeThumbnail            from "../../external/symlinks/tools/universal-time/thumbnail.webp?w=300;512&format=webp&as=picture"
+import EMCLCompilerThumbnail             from "../../external/symlinks/tools/emcl-compiler/thumbnail.webp?w=300;512&format=webp&as=picture"
+import ReuleauxPolygonGeneratorThumbnail from "../../external/symlinks/tools/reuleaux-polygon-generator/thumbnail.webp?w=300;512&format=webp&as=picture"
+import PixelTextGeneratorThumbnail       from "../../external/symlinks/tools/pixel-text-generator/thumbnail.webp?w=300;512&format=webp&as=picture"
+import SuvatCalculatorThumbnail          from "../../external/symlinks/tools/suvat-calculator/thumbnail.webp?w=300;512&format=webp&as=picture"
+import Ascii3DThumbnail                  from "../../external/symlinks/misc/ascii3d/demos/water/thumbnail.webp?w=300;512&format=webp&as=picture"
 
 const tools = [
 	{
+		href: "./misc/buddhabrot/",
+		thumbnail: BuddhabrotThumbnail,
+		title: "Buddhabrot Set Explorer",
+		details: "Visualize the Buddhabrot set."
+	},
+	{
 		href: "./misc/mandelbrot/",
-		imageSrc: MandelbrotThumbnail,
+		thumbnail: MandelbrotThumbnail,
 		title: "6D Mandelbrot Set Explorer",
 		details: "Visualize the Mandelbrot set in 6D space."
 	},
 	{
 		href: "./tools/text-display-mesher/",
-		imageSrc: TextDisplayMesherThumbnail,
+		thumbnail: TextDisplayMesherThumbnail,
 		title: "Text Display Mesher",
 		details: "Convert 3D models to Minecraft text displays.",
 	},
 
 	{
 		href: "./tools/qr-code-generator/",
-		imageSrc: QRCodeGeneratorThumbnail,
+		thumbnail: QRCodeGeneratorThumbnail,
 		title: "QR Code Generator",
 		details: "Generate QR Codes.",
 	},
 	
 	{
 		href: "./tools/image-folder-resizer/",
-		imageSrc: ImageFolderResizerThumbnail,
+		thumbnail: ImageFolderResizerThumbnail,
 		title: "Image Folder Resizer",
 		details: "Batch resize images inside a folder hierarchy.",
 	},
 	
 	{
 		href: "./tools/file-converter/",
-		imageSrc: FileConverterThumbnail,
+		thumbnail: FileConverterThumbnail,
 		title: "File Converter",
 		details: "Convert audio, image and video formats.",
 	},
 	
 	{
 		href: "./tools/visual-acuity-test/",
-		imageSrc: VisualAcuityTestThumbnail,
+		thumbnail: VisualAcuityTestThumbnail,
 		title: "Visual Acuity Test",
 		details: "Randomized eye test.",
 	},
 	
 	{
 		href: "./misc/boids/",
-		imageSrc: BoidsThumbnail,
+		thumbnail: BoidsThumbnail,
 		title: "Boids",
 		details: "Flocking Simulation.",
 	},
 	
 	{
 		href: "./misc/sorting-algorithm-visualizer/",
-		imageSrc: SortingAlgorithmThumbnail,
+		thumbnail: SortingAlgorithmThumbnail,
 		title: "Sorting Algorithm Visualizer",
 		details: "Visualize Sorting Algorithms.",
 	},
 	
 	{
 		href: "./misc/kinematic-chain/",
-		imageSrc: KinematicChainThumbnail,
+		thumbnail: KinematicChainThumbnail,
 		title: "Kinematic Chain",
 		details: "Kinematic Chain simulation.",
 	},
 	
 	{
 		href: "./misc/double-pendulum/",
-		imageSrc: DoublePendulumThumbnail,
+		thumbnail: DoublePendulumThumbnail,
 		title: "Double Pendulum",
 		details: "Double Pendulum physics simulation.",
 	},
 	
 	{
 		href: "./tools/universal-time/",
-		imageSrc: UniversalTimeThumbnail,
+		thumbnail: UniversalTimeThumbnail,
 		title: "Universal Time",
 		details: "Share date times across timezones.",
 	},
 	
 	{
 		href: "./tools/emcl-compiler/",
-		imageSrc: EMCLCompilerThumbnail,
+		thumbnail: EMCLCompilerThumbnail,
 		title: "EMCL Compiler",
 		details: "A compiler for Minecraft functions.",
 	},
 	
 	{
 		href: "./tools/reuleaux-polygon-generator/",
-		imageSrc: ReuleauxPolygonGeneratorThumbnail,
+		thumbnail: ReuleauxPolygonGeneratorThumbnail,
 		title: "Reuleaux Polygon Generator",
 		details: "Generate figures of constant width.",
 	},
 	
 	{
 		href: "./tools/pixel-text-generator/",
-		imageSrc: PixelTextGeneratorThumbnail,
+		thumbnail: PixelTextGeneratorThumbnail,
 		title: "Pixel Text Generator",
 		details: "Generate pixel text of various styles.",
 	},
 	
 	{
 		href: "./tools/suvat-calculator/",
-		imageSrc: SuvatCalculatorThumbnail,
+		thumbnail: SuvatCalculatorThumbnail,
 		title: "SUVAT Calculator",
 		details: "Automatically solve SUVAT equations.",
 	},
 	
 	{
 		href: "./misc/ascii3d/demos/water/",
-		imageSrc: Ascii3DThumbnail,
+		thumbnail: Ascii3DThumbnail,
 		title: "Ascii 3D Water Demo",
 		details: "A text-based 3D renderer for JavaScript.",
 	},
@@ -345,7 +352,14 @@ globalThis.addEventListener?.("hashchange", () => urlHash = location.hash);
 		<nav class="helion-wrapping-grid gap-4" style="--min-column-width: 250px;" hidden={tabs[0]!.hash !== hash}>
 			{#each tools as tool}
 				<a class="helion-card" href={tool.href} target="_blank">
-					<img src={tool.imageSrc} width="1200" height="630" loading="lazy" alt="thumbnail">
+					<img
+						src={tool.thumbnail.img.src}
+						width={tool.thumbnail.img.w}
+						height={tool.thumbnail.img.h}
+						srcset={tool.thumbnail.sources.webp}
+						loading="lazy"
+						alt="thumbnail"
+					>
 					<div class="p-3 py-2 leading-5">
 						<h2 class="font-bold">{tool.title}</h2>
 						<small>{tool.details}</small>

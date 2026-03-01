@@ -8,6 +8,7 @@ export const symlinks = {
 	"misc/kinematic-chain"             : "kinematic-chain/dist",
 	"misc/sorting-algorithm-visualizer": "sorting-algorithm-visualizer/dist",
 	"misc/mandelbrot"                  : "mandelbrot/dist",
+	"misc/buddhabrot"                  : "buddhabrot/dist",
 
 	"tools/emcl-compiler"              : "emcl-compiler/dist/web-app",
 	"tools/file-converter"             : "file-converter/dist",
