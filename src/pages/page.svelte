@@ -1,23 +1,23 @@
 <script lang="ts">
 import { fa5_brands_discord, fa5_brands_github, fa5_brands_instagram, fa5_brands_redditAlien, fa5_brands_tiktok, fa5_brands_twitter, fa5_brands_youtube, fa5_solid_envelope, fa6_brands_bluesky } from "fontawesome-svgs";
 
-import BuddhabrotThumbnail               from "../../external/symlinks/misc/buddhabrot/thumbnail.webp?w=300;512&format=webp&as=picture";
-import MandelbrotThumbnail               from "../../external/symlinks/misc/mandelbrot/thumbnail.webp?w=300;512&format=webp&as=picture";
-import TextDisplayMesherThumbnail        from "../../external/symlinks/tools/text-display-mesher/thumbnail.webp?w=300;512&format=webp&as=picture";
-import QRCodeGeneratorThumbnail          from "../../external/symlinks/tools/qr-code-generator/thumbnail.webp?w=300;512&format=webp&as=picture";
-import ImageFolderResizerThumbnail       from "../../external/symlinks/tools/image-folder-resizer/thumbnail.webp?w=300;512&format=webp&as=picture"
-import FileConverterThumbnail            from "../../external/symlinks/tools/file-converter/thumbnail.webp?w=300;512&format=webp&as=picture"
-import VisualAcuityTestThumbnail         from "../../external/symlinks/tools/visual-acuity-test/thumbnail.webp?w=300;512&format=webp&as=picture"
-import BoidsThumbnail                    from "../../external/symlinks/misc/boids/thumbnail.webp?w=300;512&format=webp&as=picture"
-import SortingAlgorithmThumbnail         from "../../external/symlinks/misc/sorting-algorithm-visualizer/thumbnail.webp?w=300;512&format=webp&as=picture"
-import KinematicChainThumbnail           from "../../external/symlinks/misc/kinematic-chain/thumbnail.webp?w=300;512&format=webp&as=picture"
-import DoublePendulumThumbnail           from "../../external/symlinks/misc/double-pendulum/thumbnail.webp?w=300;512&format=webp&as=picture"
-import UniversalTimeThumbnail            from "../../external/symlinks/tools/universal-time/thumbnail.webp?w=300;512&format=webp&as=picture"
-import EMCLCompilerThumbnail             from "../../external/symlinks/tools/emcl-compiler/thumbnail.webp?w=300;512&format=webp&as=picture"
-import ReuleauxPolygonGeneratorThumbnail from "../../external/symlinks/tools/reuleaux-polygon-generator/thumbnail.webp?w=300;512&format=webp&as=picture"
-import PixelTextGeneratorThumbnail       from "../../external/symlinks/tools/pixel-text-generator/thumbnail.webp?w=300;512&format=webp&as=picture"
-import SuvatCalculatorThumbnail          from "../../external/symlinks/tools/suvat-calculator/thumbnail.webp?w=300;512&format=webp&as=picture"
-import Ascii3DThumbnail                  from "../../external/symlinks/misc/ascii3d/demos/water/thumbnail.webp?w=300;512&format=webp&as=picture"
+import BuddhabrotThumbnail               from "../../external/symlinks/misc/buddhabrot/thumbnail.webp?w=300;512&lossless&format=webp&as=picture";
+import MandelbrotThumbnail               from "../../external/symlinks/misc/mandelbrot/thumbnail.webp?w=300;512&lossless&format=webp&as=picture";
+import TextDisplayMesherThumbnail        from "../../external/symlinks/tools/text-display-mesher/thumbnail.webp?w=300;512&lossless&format=webp&as=picture";
+import QRCodeGeneratorThumbnail          from "../../external/symlinks/tools/qr-code-generator/thumbnail.webp?w=300;512&lossless&format=webp&as=picture";
+import ImageFolderResizerThumbnail       from "../../external/symlinks/tools/image-folder-resizer/thumbnail.webp?w=300;512&lossless&format=webp&as=picture"
+import FileConverterThumbnail            from "../../external/symlinks/tools/file-converter/thumbnail.webp?w=300;512&lossless&format=webp&as=picture"
+import VisualAcuityTestThumbnail         from "../../external/symlinks/tools/visual-acuity-test/thumbnail.webp?w=300;512&lossless&format=webp&as=picture"
+import BoidsThumbnail                    from "../../external/symlinks/misc/boids/thumbnail.webp?w=300;512&lossless&format=webp&as=picture"
+import SortingAlgorithmThumbnail         from "../../external/symlinks/misc/sorting-algorithm-visualizer/thumbnail.webp?w=300;512&lossless&format=webp&as=picture"
+import KinematicChainThumbnail           from "../../external/symlinks/misc/kinematic-chain/thumbnail.webp?w=300;512&lossless&format=webp&as=picture"
+import DoublePendulumThumbnail           from "../../external/symlinks/misc/double-pendulum/thumbnail.webp?w=300;512&lossless&format=webp&as=picture"
+import UniversalTimeThumbnail            from "../../external/symlinks/tools/universal-time/thumbnail.webp?w=300;512&lossless&format=webp&as=picture"
+import EMCLCompilerThumbnail             from "../../external/symlinks/tools/emcl-compiler/thumbnail.webp?w=300;512&lossless&format=webp&as=picture"
+import ReuleauxPolygonGeneratorThumbnail from "../../external/symlinks/tools/reuleaux-polygon-generator/thumbnail.webp?w=300;512&lossless&format=webp&as=picture"
+import PixelTextGeneratorThumbnail       from "../../external/symlinks/tools/pixel-text-generator/thumbnail.webp?w=300;512&lossless&format=webp&as=picture"
+import SuvatCalculatorThumbnail          from "../../external/symlinks/tools/suvat-calculator/thumbnail.webp?w=300;512&lossless&format=webp&as=picture"
+import Ascii3DThumbnail                  from "../../external/symlinks/misc/ascii3d/demos/water/thumbnail.webp?w=300;512&lossless&format=webp&as=picture"
 
 const tools = [
 	{
@@ -189,7 +189,7 @@ const socials = [
 	//},
 	{
 		target: "_top",
-		href: "mailto:cymaera@heledron.com",
+		href: ["mailto:", "cymaera", "@", "heledron.com"].join(""),
 		icon: fa5_solid_envelope,
 		label: "Email",
 	}

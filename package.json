@@ -2,7 +2,7 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev": "astro dev",
+		"dev": "astro dev --host",
 		"build": "astro build",
 		"preview": "astro preview",
 		"validate": "bun scripts/symlinks_validate.ts",
