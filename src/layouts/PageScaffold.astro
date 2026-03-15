@@ -1,5 +1,6 @@
 ---
 import "./theme.css";
+import "fontawesome-svgs/default.css";
 
 interface Props {
 	title: string;
@@ -30,5 +31,9 @@ const canonicalUrl = new URL(Astro.url.pathname, "https://heledron.com").href;
 </head>
 <body>
 	<slot />
+	<script>
+		// Fix iOS Safari :active styles.
+		document.documentElement.addEventListener("touchstart",()=>undefined);
+	</script>
 </body>
 </html>

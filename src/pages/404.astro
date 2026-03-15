@@ -1,10 +1,10 @@
 ---
-import Layout from '../layouts/PageScaffold.astro';
+import PageScaffold from '../layouts/PageScaffold.astro';
 import { fa5_solid_home } from "fontawesome-svgs";
 const statusCode = 404;
 const error = new Error("Not Found");
 ---
-<Layout
+<PageScaffold
 	title={`${statusCode} - ${error.message}`}
 	description={`${statusCode} - ${error.message}`}
 	keywords="Heledron, Hadron, Cymaera"
@@ -19,4 +19,4 @@ const error = new Error("Not Found");
 
 		<a href="/" class="text-primary-600"><Fragment set:html={fa5_solid_home} /> Go back to home page</a>
 	</div>
-</Layout>
+</PageScaffold>
