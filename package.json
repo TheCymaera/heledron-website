@@ -11,15 +11,15 @@
 		"deploy": "bun scripts/deploy.ts"
 	},
 	"dependencies": {
-		"@astrojs/svelte": "^8.0.0",
-		"@tailwindcss/vite": "^4.2.1",
-		"@types/node": "^25.5.0",
-		"astro": "^6.0.4",
+		"@astrojs/svelte": "^8.0.5",
+		"@tailwindcss/vite": "^4.2.4",
+		"@types/node": "^25.6.0",
+		"astro": "^6.1.8",
 		"fontawesome-svgs": "^2.0.0",
-		"svelte": "^5.53.12",
-		"tailwindcss": "^4.2.1",
-		"typescript": "^5.9.3",
-		"vite": "^8.0.0",
+		"svelte": "^5.55.4",
+		"tailwindcss": "^4.2.4",
+		"typescript": "^6.0.3",
+		"vite": "^8.0.9",
 		"vite-imagetools": "^10.0.0"
 	}
 }

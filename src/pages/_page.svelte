@@ -316,13 +316,18 @@ globalThis.addEventListener?.("hashchange", () => urlHash = location.hash);
 		<main class="helion-card p-4">
 			<h2 class="text-xl font-bold">Welcome!</h2>
 			<p>
-				This is my personal website. I post my projects here, including free tools, packages, and more.
+				This is my personal website, where I host free tools and art projects.
 			</p>
 		</main>
 
 		<div class="helion-card p-4 py-3">
-			Current Project: <code><a href="https://youtu.be/uZmEYYs0ZKs" target="_blank" class="text-primary-600">https://youtu.be/uZmEYYs0ZKs</a></code>
+			Current Project: <code><a href="/games/game-engine-test/" target="_blank" class="text-primary-600">Game Engine</a></code>
 		</div>
+
+		<!--<div class="helion-card p-4 py-3 text-sm">
+			<b>News: </b>
+			<span>Added touch-based input to the Mandelbrot and Buddhabrot explorers.</span>
+		</div>-->
 
 		<div class="flex justify-center gap-4">
 			<div class="grid grid-cols-[repeat(2,1fr)] bg-container text-onContainer rounded-full">

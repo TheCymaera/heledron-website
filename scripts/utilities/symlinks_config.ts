@@ -20,4 +20,6 @@ export const symlinks = {
 	"tools/universal-time"             : "universal-time/dist",
 	"tools/visual-acuity-test"         : "visual-acuity-test/dist",
 	"tools/text-display-mesher"        : "text-display-mesher/dist",
+
+	"games/game-engine-test"           : "js-game-engine/dist",
 }
