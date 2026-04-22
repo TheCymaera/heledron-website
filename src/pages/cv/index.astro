@@ -12,6 +12,7 @@ import MinecraftGOL from "./images/minecraft-gol.jpg";
 import MinecraftSnakeGame from "./images/minecraft-snake-game.jpg";
 
 import PhysicsEngine from "./images/ecs-physics-engine.png";
+import IKSystem from "./images/ecs-ik-system.png";
 import LLMClient from "./images/llm-client.png";
 import GameEngine2DShooter from "./images/game-engine-2d-shooter.png";
 import GameEngineDeep from "./images/game-engine-deep.png";
@@ -73,7 +74,7 @@ import PageScaffold from "../../layouts/PageScaffold.astro";
 		</div>
 
 		<p>
-			I've built and maintained a number of marketing websites for clients, including one for a food logistics company in Hong Kong. The original WordPress site was slow and locked into an overpriced hosting plan. I rebuilt it using SvelteKit, which slashed load times in half, added added localization features (5 languages) as well as support for every screen size.
+			I built and maintained a number of marketing websites for clients, including one for a food logistics company in Hong Kong. The original WordPress site was slow and locked into an overpriced hosting plan. I rebuilt it using SvelteKit, which slashed load times in half, added added localization features (5 languages) as well as support for every screen size.
 		</p>
 
 		
@@ -96,6 +97,21 @@ import PageScaffold from "../../layouts/PageScaffold.astro";
 			I continue to maintain and add new features to the system.
 		</p>
 
+		<h2>Technical Consultancy</h2>
+		<p>
+			I provided freelance services for a custom software development company in Hong Kong, where I helped evaluate and implement technologies for their projects:
+		</p>
+
+		<ul class="list-disc pl-6">
+			<li>Data analysis and Machine Learning using Apache Spark.</li>
+			<li>Observability using OpenTelemetry and Grafana.</li>
+			<li>Authentication Solutions.</li>
+			<li>Headless CMS Solutions.</li>
+			<li>Integration with multiple LLM providers.</li>
+			<li>Integration with multiple Programmatic Web Search providers.</li>
+			<li>Integration with E-Learning platforms via SCORM.</li>
+		</ul>
+
 		<h2 class="break-before-page">Heledron.com</h2>
 
 		<p>
@@ -106,7 +122,7 @@ import PageScaffold from "../../layouts/PageScaffold.astro";
 			A few notable examples:
 		</p>
 
-		<helion-wrapping-grid style="--min-column-width: 300px; gap: 1.5rem;">
+		<helion-wrapping-grid style="--min-column-width: 300px; gap: 1.5rem;" class="print:text-sm">
 			<helion-card>
 				<img class="w-full" src="/misc/mandelbrot/thumbnail.webp" alt="6D Mandelbrot Explorer" />
 				<div class="p-3">
@@ -117,6 +133,25 @@ import PageScaffold from "../../layouts/PageScaffold.astro";
 				</div>
 			</helion-card>
 
+			<helion-card>
+				<img class="w-full" src="/misc/buddhabrot/thumbnail.webp" alt="Buddhabrot Set Explorer" />
+				<div class="p-3">
+					<h3 class="m-0">Buddhabrot Explorer</h3>
+					<p class="m-0">
+						A tool for exploring the Buddhabrot that uses WebGPU to calculate thousands of orbits in parallel.
+					</p>
+				</div>
+			</helion-card>
+
+			<helion-card>
+				<img class="w-full" src="/tools/text-display-mesher/thumbnail.webp" alt="Text Display Mesher" />
+				<div class="p-3">
+					<h3 class="m-0">Text Display Mesher</h3>
+					<p class="m-0">
+						A tool for rendering <code>obj</code> and <code>glTF</code> 3D models in Vanilla Minecraft using text displays.
+					</p>
+				</div>
+			</helion-card>
 
 			<helion-card>
 				<img class="w-full" src="/misc/ascii3d/demos/water/thumbnail.webp" alt="Ascii 3D" />
@@ -150,7 +185,7 @@ import PageScaffold from "../../layouts/PageScaffold.astro";
 		</helion-wrapping-grid>
 
 
-		<h3>EMCL Compiler</h3>
+		<h3 class="break-before-page">EMCL Compiler</h3>
 
 		<p>
 			A compiler that converts my own programming language (EMCL), into Minecraft functions, a verbose, low-level language with some similarities to assembly.
@@ -197,7 +232,7 @@ import PageScaffold from "../../layouts/PageScaffold.astro";
 
 		<h3>Minecraft Modding</h3>
 		<p>
-			I've worked on a few Minecraft programming projects with companion YouTube tutorials.
+			I worked on a few Minecraft programming projects with companion YouTube tutorials.
 		</p>
 		<div class="grid gap-4 grid-cols-2">
 			<a class="helion-card shadow-md overflow-hidden text-inherit! no-underline!" href="https://youtu.be/PSnPOYeTW-0" target="_blank">
@@ -229,32 +264,35 @@ import PageScaffold from "../../layouts/PageScaffold.astro";
 		<br>
 
 		<p>
-			I've also worked with the design studio <a href="https://varunabuilds.com/" target="_blank">Varuna</a>. I was the sole programmer for
+			I also worked with the design studio <a href="https://varunabuilds.com/" target="_blank">Varuna</a>. I was the sole programmer for
 			<a href="https://headlinermagazine.net/alfie-templeman-celebrates-new-album-launch-with-virtual-minecraft-festival.html" target="_blank">The Alfie Templeman Minecraft Festival</a>, and <a href="https://varunabuilds.com/nijisanji-prism-cup" target="_blank">Nijisanji Prism Cup 2023</a>.
 		</p>
 
-		<h2>LLM Client</h2>
+		<h2 class="break-before-page">LLM Client</h2>
 		<img src={LLMClient.src} alt="LLM Client">
 
 		<p>
 			An LLM client that integrates with several model providers, supporting text, image, audio, and video.
 		</p>
 
-		<h2>ECS Game Engine (Work in progress)</h2>
-		<img class="w-full max-w-100" src={PhysicsEngine.src} alt="ECS Physics Engine">
+		<h2 class="break-before-page">ECS Game Engine (Work in progress)</h2>
+		<div class="flex gap-4 not-print:flex-wrap  relative items-start">
+			<img class="w-full max-w-100" src={PhysicsEngine.src} alt="ECS Physics Engine">
+			<img class="w-full max-w-100" src={IKSystem.src} alt="ECS IK System">
+		</div>
 
 		<p>
-			A work-in-progress ECS game engine inspired by Bevy. It currently features a 2D physics engine and a tilemap system.
+			A work-in-progress ECS game engine inspired by Bevy. It currently features a 2D physics engine, a tilemap system, a rudimentary 3D renderer, and an IK system.
 		</p>
 
 		<h2>Legacy Game Engine</h2>
-		<div class="flex gap-4 flex-wrap relative items-start">
+		<div class="flex gap-4 not-print:flex-wrap relative items-start">
 			<img class="shadow-md block max-h-75" src={GameEngine2DShooter.src} alt="Legacy Game Engine">
 			<img class="shadow-md nearest-neighbor block max-h-75" src={GameEngineDeep.src} alt="Legacy Game Engine">
 		</div>
 
 		<p>
-			A 2D game engine I built when I was a beginner, which I used for a few games. It was abandoned as my evolving standards for code quality made it easier to begin from scratch.
+			A 2D game engine I built when I was a beginner, which I used to make a few games. It was abandoned in favour of the ECS engine.
 		</p>
 
 		<h2 class="break-before-page">ICECube (Code Editor)</h2>
@@ -266,6 +304,13 @@ import PageScaffold from "../../layouts/PageScaffold.astro";
 			It featured a code editor with syntax highlighting, a JSON editor capable of editing complex nested JSON objects defined by a schema, and multiple graphical editors, all built from scratch.
 
 			It was abandoned due to a lack of users, and my improved standards for code quality and UX.
+		</p>
+
+
+		<h2>Contribution to Open Source Projects</h2>
+
+		<p>
+			I implemented resize observer bindings to Svelte after encountering limitations with the legacy iframe workaround.
 		</p>
 	</div>
 </PageScaffold>
