@@ -9,6 +9,7 @@
 	--color-containerHover: color-mix(in srgb, var(--color-container), var(--color-onContainer) 6.5%);
 	--color-containerActive: color-mix(in srgb, var(--color-container), var(--color-onContainer) 12%);
 
+	--color-primary-50: var(--color-teal-50);
 	--color-primary-100: var(--color-teal-100);
 	--color-primary-200: var(--color-teal-200);
 	--color-primary-300: var(--color-teal-300);
@@ -18,13 +19,14 @@
 	--color-primary-700: var(--color-teal-700);
 	--color-primary-800: var(--color-teal-800);
 	--color-primary-900: var(--color-teal-900);
+	--color-primary-950: var(--color-teal-950);
 
 	--color-onPrimary: #fff;
 
 	--color-codeContainer: color-mix(in srgb, transparent, var(--color-onSurface) 5%);
 
-	--outline-width: 2.5px;
-	--outline-offset: 2.5px;
+	--outline-width: 3px;
+	--outline-offset: 3px;
 }
 
 @layer base {
@@ -54,7 +56,7 @@
 
 	:where(:focus-visible) {
 		outline-style: solid;
-		outline-color: var(--color-primary-500);
+		outline-color: var(--color-primary-600);
 	}
 
 	helion-wrapping-grid, .helion-wrapping-grid {
@@ -102,4 +104,45 @@
 	-ms-interpolation-mode: nearest-neighbor;
 	image-rendering: crisp-edges;
 	image-rendering: pixelated;
+}
+
+@utility inset-outline {
+	outline-offset: calc(var(--outline-width) * -1);
+}
+
+@utility typography {
+	@layer base {
+		line-height: 1.5;
+		text-wrap: pretty;
+
+		h1 {
+			font-size: 2rem;
+			font-weight: 600;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			font-weight: 600;
+		}
+
+		h3 {
+			font-size: 1.17rem;
+			font-weight: 600;
+		}
+
+		* {
+			min-height: 0;
+			min-width: 0;
+		}
+
+		p,
+		h1, h2, h3, h4, h5, h6 {
+			margin: .5em 0;
+		}
+
+		a {
+			color: var(--color-primary-600);
+			text-decoration: underline;
+		}
+	}
 }

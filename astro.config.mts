@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService } from 'astro/config';
 import { defineConfig as defineViteConfig } from 'vite';
 import { serveDirectoryPlugin } from "./vite-plugins/serveDirectoryPlugin.js";
 import tailwindcss from '@tailwindcss/vite'
@@ -17,6 +17,9 @@ export default defineConfig({
 			tailwindcss(),
 		]
 	}) as ViteUserConfig,
+	image: {
+		service: passthroughImageService(),
+	},
 });
 
 function sitemapIntegration(): AstroIntegration {

@@ -333,8 +333,8 @@ globalThis.addEventListener?.("hashchange", () => urlHash = location.hash);
 			<div class="grid grid-cols-[repeat(2,1fr)] bg-container text-onContainer rounded-full">
 				{#each tabs as tab}
 					{@const isActive = tab.hash === hash}
-					{@const activeClasses = "cursor-default bg-primary-600! text-onPrimary"}
-					{@const notActiveClasses = "outline-offset-0"}
+					{@const activeClasses = "cursor-default bg-primary-600! text-shadow-primary-700 text-shadow-md text-onPrimary"}
+					{@const notActiveClasses = "inset-outline"}
 					<a 
 						href={tab.hash} 
 						class="
@@ -343,8 +343,8 @@ globalThis.addEventListener?.("hashchange", () => urlHash = location.hash);
 							px-7 py-1 rounded-full
 							hover:bg-containerHover
 							active:bg-containerActive
-							transition-[background-color,color,outline-offset]
-							will-change-[background-color,color,outline-offset]
+							transition-[background-color,text-shadow,color,outline-offset]
+							will-change-[background-color,text-shadow,color,outline-offset]
 							{isActive ? activeClasses : notActiveClasses}
 						"
 					>
